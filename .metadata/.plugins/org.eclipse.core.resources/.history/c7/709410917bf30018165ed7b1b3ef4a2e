@@ -1,0 +1,12 @@
+package com.roshan.myPackage;
+
+public class Cidco {
+
+	public static void main(String[] args) {
+		Cidco cidco1 = new Cidco();
+		Cidco cidco2 = new Cidco();
+		Cidco cidco3 = new Cidco();
+		Cidco cidco4 = new Cidco();
+	}
+	
+}

@@ -1,0 +1,16 @@
+package LambdaMethodReferences;
+
+import java.util.stream.Stream;
+
+public class LMethodRef {
+
+	public static void main(String[] args) {
+	
+		int[] num = {1000,2000,3000,6000};
+	num[].stream().filter(price-> price<=3000).forEach(System.out::println);
+		
+		
+
+	}
+
+}

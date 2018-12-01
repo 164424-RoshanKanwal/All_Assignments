@@ -1,0 +1,25 @@
+package com.roshan.myPackage;
+
+public class Cidco {
+	
+	int rm = 9;
+	int tt = 99;
+
+	public static void main(String[] args) {
+		Cidco cidco1 = new Cidco();
+		Cidco cidco2 = new Cidco();
+		Cidco cidco3 = new Cidco();
+		Cidco cidco4 = new Cidco();
+		
+		//every object will have same non static members
+		
+	System.out.println(cidco1.rm);
+	System.out.println(cidco1.tt);
+	System.out.println(cidco2.rm);
+	System.out.println(cidco2.tt);
+	System.out.println(cidco3.rm);
+	System.out.println(cidco3.tt);
+	
+	}
+	
+}

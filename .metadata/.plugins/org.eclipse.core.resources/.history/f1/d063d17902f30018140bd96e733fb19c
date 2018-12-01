@@ -1,0 +1,35 @@
+package java8;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+public class ComparatorFI {
+
+	public static void main(String[] args) {
+		
+	ArrayList<Person> personList = new ArrayList<Person>();
+	personList.add(new Person("Roshan","kanwal", 23));
+	personList.add(new Person("Rohit", "Heh", 24));
+	personList.add(new Person("Roshang","kanwalt", 22));
+	personList.add(new Person("Rohitu", "Hehs", 12));
+	personList.add(new Person("Roshani","kanwalnb", 13));
+	personList.add(new Person("Rohita", "Hehfg", 57));	
+		
+	
+	
+	Collections.sort(personList, (p1,p2) -> p1.getLname().compareTo(p2.getLname()));
+			
+	printAll(personList);
+	}
+
+	private static void printAll(ArrayList<Person> personList) {
+		
+		for(Person p : personList)
+		{
+			System.out.println(p);
+		}
+	}
+
+	
+}

@@ -1,0 +1,11 @@
+package GenericExamples;
+
+public class BankAccount {
+
+	public void addBankAcc(){
+		
+		System.out.println("Bank Account Added");
+		
+	}
+	
+}

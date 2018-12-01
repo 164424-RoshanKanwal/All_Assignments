@@ -1,0 +1,28 @@
+package StreamPractice;
+
+public class StreamMethodReference1 {
+
+	public void saySomething(){
+		 
+		 System.out.println("Hello Everyone!!!");
+		 
+	 }
+	
+	public static void main(String[] args) {
+		StreamMethodReference1 one = new StreamMethodReference1();
+		Sayable say1 = one :: saySomething;
+		say1.say();
+		
+		
+	}
+	
+}
+@FunctionalInterface
+interface Sayable{
+	 void say();
+ }
+
+
+
+
+	 

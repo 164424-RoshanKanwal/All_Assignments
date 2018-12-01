@@ -1,0 +1,40 @@
+package com.roshan.collectionAssignmentQuestion3;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class ArrayListBackward {
+
+	public static void main(String[] args) {
+		
+		/*ArrayList<String> list = new ArrayList<String>();
+		list.add("roshan");
+		list.add("kanwal");
+		list.add("hello");
+		int a=0;
+		ListIterator<String> li=list.listIterator();
+		while (li.hasNext()) {
+			String string = (String) li.next();
+			System.out.println(string);
+			if(string.equalsIgnoreCase("kanwal")){
+				a=li.previousIndex();
+			}
+		}
+		System.out.println("***********  "+list.get(a));
+		while (li.hasPrevious()) {
+			String string = (String) li.previous();
+			System.out.println(string);
+		}*/
+		HashSet<String> list = new HashSet<>();
+		//ArrayList<String> list = new ArrayList<String>();
+		list.add("roshan");
+		list.add("kanwal");
+		list.add("hello");
+		list.add("urvi");
+		System.out.println(list);
+		Iterator<String> list
+		System.out.println(list);
+	}
+}

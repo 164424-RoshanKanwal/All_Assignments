@@ -1,0 +1,22 @@
+package StreamPractice;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+public class Stream2 {
+
+public static void main(String[] args) {
+	
+	List<String> list = Arrays.asList("Roshan","Rahul","oshfa ","heloo", "lall");
+	
+	List<String> modList = list.stream().filter(name-> name.startsWith("R")).collect(Collectors.toList());
+	
+	System.out.println(modList);
+	
+	List<String> sortedList = list.stream().sorted().collect(Collectors.toList());
+	System.out.println(sortedList);
+}
+
+}

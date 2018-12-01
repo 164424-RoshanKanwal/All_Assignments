@@ -1,0 +1,22 @@
+package com.lambda6;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class UpperCaseEqui {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> list = new ArrayList<>();
+		list.add("hello");
+		list.add("hello there!");
+		list.add("Can you help?");
+		list.add("hell");
+		list.add("bye");
+		
+		Iterator itr = list.iterator();
+		
+	}
+	
+	
+}

@@ -1,0 +1,14 @@
+package com.roshan.assignment2;
+
+public abstract class AbstractClass {
+
+	public void h1() {
+		
+	}
+
+	public abstract void h2();
+
+	public static void main(String[] args) {
+		
+	}
+}

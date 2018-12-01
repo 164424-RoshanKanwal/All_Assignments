@@ -1,0 +1,13 @@
+package com.roshan.collectionAssignment;
+
+public class myComparator implements Comparator{
+
+	public void compare(Object obj1, Object obj2){
+		
+		
+		
+	}
+
+	
+	
+}

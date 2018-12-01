@@ -1,0 +1,26 @@
+package StreamPractice;
+
+public class StreamMethodReference1 {
+
+	public static void main(String[] args) {
+		
+		Sayable say1 = SayableDefinition :: saySomething;
+		say1.say();
+		
+		
+	}
+	
+}
+interface Sayable{
+	 void say();
+ }
+
+
+ class SayableDefinition{
+
+	 public static void saySomething(){
+		 
+		 System.out.println("Hello Everyone!!!");
+		 
+	 }
+}

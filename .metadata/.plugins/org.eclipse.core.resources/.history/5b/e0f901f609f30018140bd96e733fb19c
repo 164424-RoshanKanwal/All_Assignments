@@ -1,0 +1,19 @@
+package com.lambda2;
+
+import java.util.function.BiFunction;
+
+public class LambdaQ2 {
+	
+	int orderPrice;
+	String orderStatus;
+	
+	
+	
+	public static void main(String[] args) {
+		
+	BiFunction<Integer, String, Boolean> biFunction = ()
+	}
+
+}
+
+	

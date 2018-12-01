@@ -1,0 +1,15 @@
+package java8;
+
+public class Greetings {
+
+	public void greet(){
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		Greetings gr = new Greetings();
+		gr.greet();
+	}
+	
+}

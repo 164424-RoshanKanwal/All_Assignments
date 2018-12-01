@@ -1,0 +1,10 @@
+package com.streamAssignments;
+
+public class News {
+	private int newsId;
+	private String postedByUser;
+	private String commentByUser; 
+	private String comment;
+	
+	
+}

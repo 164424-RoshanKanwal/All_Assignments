@@ -1,0 +1,51 @@
+package com.lambda2;
+
+import java.util.function.BiFunction;
+
+public class LambdaQ2 {
+	
+	static int orderPrice;
+	static String orderStatus;
+	
+	public LambdaQ2(int orderPrice, String orderStatus) {
+		super();
+		this.orderPrice = orderPrice;//10000;
+		this.orderStatus = orderStatus;//"Completed";
+	}
+
+
+
+	public static void main(String[] args) {
+		
+		
+		
+	BiFunction<Integer, String, Boolean> biFunction = (orderPrice,orderStatus) ->{
+		if(orderPrice>=10000 && orderStatus.equalsIgnoreCase("Completed")){
+			return true;
+		}
+		else{
+			return false;
+		}
+	};
+	System.out.println(biFunction.apply(23000, "completed"));
+	printAns(biFunction);
+	}
+
+
+
+	private static void printAns(BiFunction<Integer, String, Boolean> biFunction) {
+		
+		if(biFunction.apply(10000, "cOMPLETED")){
+			System.out.println("ITs true");
+		}
+		{
+			System.out.println("It's false");
+		}
+		
+	}
+	
+	
+
+}
+
+	

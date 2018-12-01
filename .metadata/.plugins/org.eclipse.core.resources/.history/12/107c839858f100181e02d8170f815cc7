@@ -1,0 +1,12 @@
+package com.roshan.collectionAssignmentQuestion10;
+
+public class Movie_Details {
+
+	//mov_Name, lead_actor, lead_actories, and genre
+	
+	private String mov_Name;
+	private String lead_actor;
+	private String lead_actress;
+	private String genre;
+	
+}

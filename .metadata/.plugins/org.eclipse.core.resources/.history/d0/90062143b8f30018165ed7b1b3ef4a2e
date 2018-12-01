@@ -1,0 +1,10 @@
+package LambdaMethodReferences;
+
+public class LMethodRef {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.roshan.collectionAssignmentQuestion9;
+
+import java.util.LinkedHashSet;
+
+public class BankAccountList {
+
+	LinkedHashSet<SavingAccount> linkedSet;
+	public BankAccountList() {
+		linkedSet = new LinkedHashSet<SavingAccount>();
+	}
+	
+	public boolean addAcc(SavingAccount savingAcc){
+		return linkedSet.add(savingAcc);
+	}
+	public static void main(String[] args) {
+		
+		BankAccountList accList = new BankAccountList();
+		
+		accList.addAcc(new SavingAccount(101, "Roshan", 1000, true));
+		accList.addAcc(new SavingAccount(102, "Kanwal", 2343, false));
+		
+		System.out.println(accList);
+		
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,33 @@
+package com.lambda6;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.function.UnaryOperator;
+
+public class UpperCaseEqui {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> list = new ArrayList<>();
+		list.add("hello");
+		list.add("hello there!");
+		list.add("Can you help?");
+		list.add("hell");
+		list.add("bye");
+		
+		//Iterator itr = list.iterator();
+		
+		UnaryOperator<String> unary = (s)-> {
+			return s.toUpperCase();
+		};
+		
+		System.out.println(unary.apply(list.get(0)););
+		 replaceAll(unary);
+	//	System.out.println(UnaryOperator.identity());
+	}
+	
+	public static void replaceAll(UnaryOperator<String> unary){
+		
+	}
+	
+}

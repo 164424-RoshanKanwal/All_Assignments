@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.roshan.assignment2.A2Q3Persistence"/>
+<fullyQualifiedTypeName name="com.roshan.assignment1.CheckArmstrongNumber"/>
+<fullyQualifiedTypeName name="com.roshan.assignment1.IncomeTax"/>
+<fullyQualifiedTypeName name="com.roshan.assignment1.Subjects"/>
+<fullyQualifiedTypeName name="com.roshan.date.TestRecords"/>
+<fullyQualifiedTypeName name="com.roshan.date.MyDate"/>
+<fullyQualifiedTypeName name="com.roshan.myPackage.Cidco"/>
+<fullyQualifiedTypeName name="com.lambda6.UpperCaseEqui"/>
+<fullyQualifiedTypeName name="java.util.function.UnaryOperator"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.lang.Iterable"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
+<fullyQualifiedTypeName name="java.util.TreeSet"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.stream.Collector"/>
+<fullyQualifiedTypeName name="java.util.stream.Collectors"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="StreamPractice.Dummy"/>
+<fullyQualifiedTypeName name="com.stream.assignments.Utils.CheckIfICanAddMyFunctionalInterface"/>
+<fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+<fullyQualifiedTypeName name="StreamPractice.StreamMethodReference1"/>
+<fullyQualifiedTypeName name="StreamPractice.SayableDefinition"/>
+<fullyQualifiedTypeName name="StreamPractice.Sayable"/>
+</qualifiedTypeNameHistroy>

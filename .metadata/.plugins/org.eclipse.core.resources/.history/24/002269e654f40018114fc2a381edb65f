@@ -1,0 +1,13 @@
+package StreamPracticeSQL;
+
+public class CRUDOperations extends EmployeeStream{
+	
+	public static void main(String[] args) {
+		
+		EmployeeStream emp = new EmployeeStream();
+		emp.listAll();
+		List<Employee> list = employeeList.stream().filter(s->true);
+		
+	}
+
+}

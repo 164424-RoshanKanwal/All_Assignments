@@ -1,0 +1,13 @@
+package GenericExamples;
+
+public class ServiceClass {
+
+	public static void main(String[] args) {
+		
+	MyList<BankAccount> acc = new MyList<BankAccount>();	
+		
+		
+		
+		
+	}
+}

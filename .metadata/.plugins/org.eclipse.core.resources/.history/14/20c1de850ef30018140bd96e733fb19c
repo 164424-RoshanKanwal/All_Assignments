@@ -1,0 +1,18 @@
+package com.lambda3;
+
+import java.util.function.Supplier;
+
+public class LambdaQ3 {
+
+	public static void main(String[] args) {
+		
+		
+		Supplier<Integer> supply = () -> 3;
+				
+			System.out.println(supply.get());	
+		
+	}
+	
+	
+	
+}

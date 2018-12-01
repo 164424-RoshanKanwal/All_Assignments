@@ -1,0 +1,11 @@
+package StreamPracticeSQL;
+
+public class Department {
+
+	private int deptId;
+	private String name;
+	private String location;
+	
+	
+	
+}

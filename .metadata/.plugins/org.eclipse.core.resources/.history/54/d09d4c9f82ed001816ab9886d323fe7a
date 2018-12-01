@@ -1,0 +1,11 @@
+package com.roshan.assignment2;
+
+public class Cube  extends Shape{
+
+	@Override
+	public void draw() {
+		
+		
+	}
+
+}

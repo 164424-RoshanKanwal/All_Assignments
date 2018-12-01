@@ -1,0 +1,13 @@
+package com.roshan.collectionAssignmentQuestion10;
+
+public interface MoviesList {
+
+	, ,
+	
+	void add_movie();
+	void remove_movie();
+	void remove_AllMovies();
+	void  find_movie_By_mov_Name();
+	void find_movie_By_Genre();
+	
+}

@@ -1,0 +1,50 @@
+package StreamPracticeSQL;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class CRUDOperations extends EmployeeStream{
+	
+	public static void main(String[] args) {
+		
+		EmployeeStream emp = new EmployeeStream();
+		List<Employee> employeeList = emp.empList();
+		List<Department> departmentList = emp.deptList();
+		
+		
+	/*List<Integer> deptId = departmentList.stream().map(s -> s.getDeptId())
+	 * 							.collect(Collectors.toList());										//----1
+	System.out.println(deptId);
+	System.out.println("-----------------------------------");*/
+	
+	//employeeList.stream().map(s-> s.getName()).forEach(System.out::println);     					//------2
+		
+		
+	/*employeeList.stream().filter(s-> s.getDeptId()==30)											//------3	
+							.map(s-> s.getName())
+							.forEach(System.out::println);*/
+	
+		//List the names, numbers and departmentno of all clerks.
+/*	employeeList.stream().filter(s-> s.getJob().equals("CLERK"))
+						.map(s-> s.getName()+ " " + s.getEmpId()+ " "  + s.getDeptId())				//-------4
+						.forEach(System.out::println);*/ 
+		
+		//Find the depart numbers and the name of employee of all dept with Deptno greater or equal to 20.
+		employeeList.stream().filter(s-> s.getDeptId() >= 20)
+											.map(s-> s.getDeptId() + " " + s.getName())				//--------5
+											.forEach(System.out::println);
+		
+		//Find the employees whose commission is greater than their salary
+		employeeList.stream().filter(employee -> employee.getComm() > employee.getSalary())
+							.map(employee-> employee).
+							.forEach(System.out::println);
+		
+		
+		//Find the employees whose commission is greater than 60 percent of their salary.
+		//8. Find the employee whose commission is greater than 50 percent of their salary.
+		//9. List the name, job and salary of all employees in dept 20 who earn more than 2000.
+		//10. Find all salesmen in dept 30 whose salary is greater than or equal to Rs. 1500.
+		
+	}
+
+}

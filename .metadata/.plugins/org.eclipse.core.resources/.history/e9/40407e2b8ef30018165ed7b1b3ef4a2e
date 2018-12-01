@@ -1,0 +1,13 @@
+package StreamPractice;
+
+import java.util.Arrays;
+
+public class Stream1 {
+
+	public static void main(String[] args) {
+		
+		
+		List list = Arrays.asList("Roshan", "Rosh","Rosha","Ros","Ro");
+	}
+	
+}

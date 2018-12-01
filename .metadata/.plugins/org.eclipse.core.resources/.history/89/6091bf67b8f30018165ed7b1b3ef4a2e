@@ -1,0 +1,15 @@
+package LambdaMethodReferences;
+
+import java.util.stream.Stream;
+
+public class LMethodRef {
+
+	public static void main(String[] args) {
+	
+	Stream.of(1000,2000,3000,6000).filter(price-> price<3000).forEach(System.out::println);
+		
+		
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package java8;
+
+
+import java.util.Arrays;
+import java.util.List;
+
+public class Unit1Exercise {
+
+	public static void main(String[] args) {
+		List<Person> myList = Arrays.asList(new Person("rosh", "kan", 23),
+								new Person("ros", "a", 23),
+								new Person("rsh", "k", 23),
+								new Person("rh", "k", 23),
+								new Person("sh", "an", 23),
+								new Person("h", "kn", 23));
+								
+								
+
+	}
+
+}

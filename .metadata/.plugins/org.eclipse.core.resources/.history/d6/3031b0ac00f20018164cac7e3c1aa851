@@ -1,0 +1,25 @@
+package GenericExamples;
+
+public class GenericExample1<T> {
+	
+	int first;
+	int second;
+	
+	
+	public static void main(String[] args) {
+		
+		GenericExample1<String> g = new GenericExample1<String>();
+		
+		System.out.println(g.first=4);
+		
+		GenericExample1<Integer> g3 = new GenericExample1<Integer>();
+		
+		System.out.println(g3.first=33);
+		
+		
+	}
+	
+	
+	
+	
+}

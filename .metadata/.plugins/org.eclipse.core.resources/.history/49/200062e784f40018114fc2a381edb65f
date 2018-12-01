@@ -1,0 +1,20 @@
+package com.streamAssignments;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TransactionList {
+private static List<Transaction> transList = new ArrayList<Transaction>();
+	
+	static{
+		transList.add(new Transaction(new Trader("shan","Mumbai"), 2011, 3254));
+		transList.add(new Trader("Rosh","Kolkata"), 2012, 12345);
+		transList.add(new Trader("Roshan","Pune"), 2013, 1200);
+		transList.add(new Trader("Ro","Pune"), 2018, 12000);
+		transList.add(new Trader("Roshan","Pune"), 2011, 1200);
+	}
+	
+	public List<Transaction> getFruits(){
+		return transList;
+	}
+}

@@ -1,0 +1,7 @@
+package com.roshan.collectionAssignmentQuestion9;
+
+public class SavingAccount {
+//acc_balance, acc_ID, accountHoldername, isSalaryAccount.
+	
+	
+}

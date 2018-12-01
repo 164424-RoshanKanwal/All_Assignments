@@ -1,0 +1,19 @@
+package GenericExamples;
+
+public class ServiceClass {
+
+	public static void main(String[] args) {
+		
+	MyList<BankAccount> list = new MyList<BankAccount>();	
+	
+	BankAccount acc = new BankAccount(1, "Roshan");
+	//list.add(acc.getAccount()  + " " + acc.getName());
+	list.add(acc);
+	System.out.println(list.get(0));
+		
+	
+	
+	MyList<Employee> list2 = new MyList<Employee>();
+	Employee e = new Employee(11, "Rahul");
+	}
+}

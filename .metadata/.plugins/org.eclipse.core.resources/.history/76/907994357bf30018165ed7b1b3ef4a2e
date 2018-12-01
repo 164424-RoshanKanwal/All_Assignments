@@ -1,0 +1,11 @@
+package com.roshan.myPackage;
+
+public class Objects {
+
+	
+	public static void main(String[] args) {
+		
+		
+		
+	}
+}

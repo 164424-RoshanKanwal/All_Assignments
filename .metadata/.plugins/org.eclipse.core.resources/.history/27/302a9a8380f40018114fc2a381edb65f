@@ -1,0 +1,47 @@
+package com.streamAssignments;
+
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class FruitsStreams {
+
+	public static void main(String[] args) {
+		FruitsList fruitsList = new FruitsList();
+		List<Fruits> fruits = fruitsList.getFruits();
+		
+/*		List<Fruits> fruitsWithCaloriesLessThan100InDescOrder = 
+				fruits.stream()
+									.filter(fruit -> fruit.getCalories()<100)
+									.sorted(Comparator.comparing(Fruits::getCalories))
+									.collect(Collectors.toList());
+		
+		System.out.println(fruitsWithCaloriesLessThan100InDescOrder);*/
+		
+		
+		
+		/*List<String> fruitsColor = fruits.stream()
+				.sorted(Comparator.comparing(Fruits::getColor))
+				.map(fruit -> fruit.getName() + " is " + fruit.getColor())		//---2
+				.collect(Collectors.toList());
+		System.out.println(fruitsColor);
+		*/
+		
+		
+		/*List<Fruits> fruitsRed = fruits.stream().filter(fruit -> fruit.getColor().equalsIgnoreCase("red"))
+										.sorted(Comparator.comparing(Fruits::getPrice))		//---3
+										.collect(Collectors.toList());
+		
+		System.out.println(fruitsRed);*/
+		
+		
+		NewsList listsOfNews = new NewsList();
+		List<News> lNews = listsOfNews.getAllNews();
+		//lNews.stream().sorted(Comparator.comparing(News::getNewsId)).forEach(System.out::println);
+		lNews.stream().map(news -> news.getNewsId())sorted(Comparator.comparing(News::getNewsId)).forEach(System.out::println);
+		
+		
+		
+	}
+	
+}

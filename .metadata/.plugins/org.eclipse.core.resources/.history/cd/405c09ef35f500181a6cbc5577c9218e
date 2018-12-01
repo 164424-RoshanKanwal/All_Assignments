@@ -1,0 +1,28 @@
+package com.stream.assignments.Utils;
+
+public class CheckIfICanAddMyFunctionalInterface {
+
+	int id;
+	String name;
+	
+	
+	
+	public static void main(String[] args) {
+		
+		CheckIfICanAddMyFunctionalInterface c1 = new CheckIfICanAddMyFunctionalInterface();
+		
+		
+		
+		
+	}
+	
+	public void myMethod(MyInterface my){
+		
+	}
+}
+ 
+
+@FunctionalInterface
+interface MyInterface{
+	void myNew();
+}

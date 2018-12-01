@@ -1,0 +1,15 @@
+package com.roshan.collectionAssignmentQuestion4;
+
+import java.util.HashMap;
+
+public class HashMapImplementation {
+
+	public static void main(String[] args) {
+		
+		HashMap m = new HashMap();
+		
+		
+		
+	}
+	
+}
