@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action ="/MyFirstProject/first" method = "">
+Name : <input type="text" name = "userName" id = "userId"><br>
+Hobbies: <input type = "checkbox" name = "Swim"> Swim
+<input type = "checkbox" name = "Sing"> Sing
+<input type = "checkbox" name = "Dance"> Dance
+<input type = "checkbox" name = "Soccer"> Soccer
+
+
+</form>
+</body>
+</html>
