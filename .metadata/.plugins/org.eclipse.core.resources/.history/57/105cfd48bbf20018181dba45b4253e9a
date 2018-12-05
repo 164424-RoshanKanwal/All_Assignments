@@ -1,9 +1,0 @@
-package com.roshan.collectionAssignmentQuestion9;
-
-public class SavingAccount {
-//acc_balance, acc_ID, accountHoldername, isSalaryAccount.
-	public static void main(String[] args) {
-		System.out.println(34 + "" + 23);
-	}
-	
-}

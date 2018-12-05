@@ -1,0 +1,53 @@
+package com.roshan.requestDispatcher;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet(description = "Understanding request dispatcher", urlPatterns = { "/reqDispatcher" })
+public class ClassRequestDispatcher extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+   
+    public ClassRequestDispatcher() {
+        super();
+        
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		
+		String userName = request.getParameter("userName");
+		String userPassword = request.getParameter("userPass");	
+		
+		if(userPassword.equalsIgnoreCase("roshan")){
+			
+			RequestDispatcher reqD = request.getRequestDispatcher("/welcome.html");
+			reqD.forward(request, response);
+			
+		}
+		else{
+			out.println("You are not an authorized user");
+			RequestDispatcher reqD = request.getRequestDispatcher("login.html");
+			reqD.include(request, response);
+		}
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+	}
+
+}

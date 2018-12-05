@@ -1,0 +1,59 @@
+package com.roshan.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.roshan.validate.IUserDAO;
+import com.roshan.validate.User;
+
+public class UserDAOVersion2 implements IUserDAO{
+
+	@Override
+	public String getUserType(String userName, String password) {
+		Connection connection = ConnectionFactory.getConnection();
+		try{
+			PreparedStatement prepareStatement = connection.prepareStatement("select * from UserTable where userName =? and password =?");
+			prepareStatement.setString(1, userName);
+			prepareStatement.setString(2, password);
+			ResultSet set = prepareStatement.executeQuery();
+			while(set.next()){
+				if(set.getString("userName").equals(userName)&& set.getString("password").equals(password)){
+					return set.getString("userType");
+				}
+				
+			}
+			
+			
+		}catch(SQLException e){
+			System.out.println(e);
+		}
+		
+		return null;
+	}
+
+	@Override
+	public void addUser(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void changePassword(String oldPassword, String newPassword) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeUser(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	public static void main(String[] args) {
+		System.out.println(new UserDAOVersion2().getUserType("Roshan", "Kanwal"));
+	}
+	
+}

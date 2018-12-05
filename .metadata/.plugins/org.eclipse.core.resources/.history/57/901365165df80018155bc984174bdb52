@@ -1,0 +1,15 @@
+package com.roshan.util;
+
+import com.roshan.validate.IUserDAO;
+import com.roshan.validate.UserDAO;
+
+public class DAOUtility {
+
+	public static IUserDAO getUserDAO(){
+		
+		
+		return new UserDAO();
+	}
+	
+	
+}

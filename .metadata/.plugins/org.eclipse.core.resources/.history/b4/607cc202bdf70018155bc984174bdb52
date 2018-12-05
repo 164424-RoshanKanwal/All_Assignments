@@ -1,0 +1,5 @@
+package com.roshan.dao;
+
+public class InvalidUserException extends Exception {
+
+}

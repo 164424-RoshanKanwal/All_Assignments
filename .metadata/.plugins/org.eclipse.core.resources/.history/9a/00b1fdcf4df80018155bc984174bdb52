@@ -1,0 +1,32 @@
+package com.roshan.validate;
+
+import java.util.ArrayList;
+
+public class UserDAO {
+
+	static ArrayList<User> userList = new ArrayList<User>();
+	
+	static {
+		userList.add(new User("roshan","kanwal", "Admin"));
+		userList.add(new User("sneha","asasas", "User"));
+		userList.add(new User("parthi","parthi", "User"));
+		userList.add(new User("urvi","patwa", "User"));
+		
+	}
+	
+	
+
+	public String getUserT(String username, String password) {
+		int userListLen= userList.size();
+		String userType ="";
+		for(int index=0; index< userListLen; index++){
+			
+			if(username.equals(userList.get(index).getName()) && password.equals(userList.get(index).getPassword())){
+				
+				userType = userList.get(index).getUserType();
+			}
+			
+		}
+		return userType;
+	}
+}

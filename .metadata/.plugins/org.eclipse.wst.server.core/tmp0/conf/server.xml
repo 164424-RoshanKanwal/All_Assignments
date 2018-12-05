@@ -126,7 +126,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="C:\Roshan_Kanwal\All_Assignments\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Roshan_Kanwal\All_Assignments\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MyFirstProject" path="/MyFirstProject" reloadable="true" source="org.eclipse.jst.jee.server:MyFirstProject"/></Host>
+      <Context docBase="C:\Roshan_Kanwal\All_Assignments\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Roshan_Kanwal\All_Assignments\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MyFirstProject" path="/MyFirstProject" reloadable="true" source="org.eclipse.jst.jee.server:MyFirstProject"/><Context docBase="C:\Roshan_Kanwal\All_Assignments\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\UserValidationProject" path="/UserValidationProject" reloadable="true" source="org.eclipse.jst.jee.server:UserValidationProject"/><Context docBase="C:\Roshan_Kanwal\All_Assignments\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\UserValidation2" path="/UserValidation2" reloadable="true" source="org.eclipse.jst.jee.server:UserValidation2"/></Host>
     </Engine>
   </Service>
 </Server>
