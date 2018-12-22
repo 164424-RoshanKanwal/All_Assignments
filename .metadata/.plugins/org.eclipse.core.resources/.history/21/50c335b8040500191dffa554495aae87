@@ -1,0 +1,9 @@
+package com.springJdbc.JdbcEx.controller;
+
+public class JdbcController {
+
+	public JdbcController() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,9 @@
+package com.springJdbc.JdbcEx.allDAO;
+
+public class IUserDAO {
+
+	public IUserDAO() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

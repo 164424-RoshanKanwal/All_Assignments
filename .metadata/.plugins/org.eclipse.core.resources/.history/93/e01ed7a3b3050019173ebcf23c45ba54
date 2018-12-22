@@ -1,0 +1,22 @@
+package com.project.shopcart.service;
+
+import java.util.List;
+
+import com.project.shopcart.dao.ProductsDAOImpl;
+import com.project.shopcart.pojo.Products;
+
+public class ProductService {
+
+	ProductsDAOImpl productsDAOImpl;
+	
+	public List<Products> getAllProducts()
+	{	
+		return dao.getAll();	
+	}
+
+	public Products getProductDetails(int productId)
+	{
+		return dao.get(productId);
+	}
+	
+}

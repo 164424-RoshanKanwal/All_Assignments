@@ -1,0 +1,39 @@
+package com.project.shopcart.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.project.shopcart.pojo.Products;
+import com.project.shopcart.service.ProductService;
+import com.project.shopcart.serviceinterface.IProductService;
+
+public class UserTransactionsDetailsImpl{
+
+	private JdbcTemplate jdbcTemplate;
+	private IProductService iProductService = new ProductService();
+	
+	public IProductService getiProductService() {
+		return iProductService;
+	}
+
+	public void setiProductService(IProductService iProductService) {
+		this.iProductService = iProductService;
+	}
+
+	public JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
+
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	
+	public void add(int productId) {
+		Products product = iProductService.getProductDetails(productId);
+		
+		String sqlQuery = "insert into UserTransactionsDetails values (?,?,?,?)";
+		jdbcTemplate.update(sqlQuery,product.getProductId(), product.getName(), product.getPrice(), product.getQuantity());
+		
+	}
+	
+}

@@ -1,0 +1,17 @@
+package com.project.shopcart.pojo;
+
+public class UserTransactionsDetails {
+
+	public UserTransactionsDetails() {
+		
+		private int userId;
+		private int productId;
+		private String name;
+		private int price;
+		private int total;
+		private int quantity;
+		
+		
+	}
+
+}

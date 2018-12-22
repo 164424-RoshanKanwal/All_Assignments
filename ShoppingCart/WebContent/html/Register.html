@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+
+table{
+align : center;
+margin : auto;
+}
+
+
+.box{
+width :420px;
+height :350px;
+text-align:center;
+background :#f0f0f0;
+border-sizing :border-box;
+top:30%;
+right:10%;
+color:#000;
+margin: 10px 100px;
+position :absolute;
+transform :Translate(-50%,-50%);
+}
+h4{
+ text-align: center;
+ font-style:bold;
+ font-size:20px;
+ }
+ tr{
+ text-align:justify;
+ 
+ font-size:16px;
+ }
+.one{
+ background-color :MediumSeaGreen;
+	height:40px;
+	margin: 5px 20px;
+	width: 100px;
+	border : MediumSeaGreen
+	
+ }
+ 
+
+
+</style>
+</head>
+<body>
+
+<form action = "/ShoppingCart/jsp/create_account.jsp" method ="post">
+<div class="box" >
+<h4 ><b>Registration</b></h4>
+
+<table>
+	<tr><td> Full Name:</td>
+	<td> <input type ="text" placeholder ="Enter your full name." name="name" required></td></tr>
+	
+	<tr><td>Email:</td>
+	<td> <input type ="text" placeholder ="Enter your email." name="email" required></td></tr>
+	
+	<tr><td>Password:</td>
+	<td> <input type ="text" placeholder ="Enter the password." name="password" required></td></tr>
+	
+	<tr><td>Address:</td>
+	<td> <input type ="text" placeholder ="Enter your Address." name="address"  required></td></tr>
+	
+	<tr><td>Phone Number:</td>
+	<td> <input type ="number" placeholder ="Enter your phone num." name ="mobile" required></td></tr></table>
+	<br><br>
+	 <input class="one" type="submit" value ="Register">
+      <button class="one" type="reset">Cancel</button>
+    
+
+</div>
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,28 @@
+package com.project.shopcart.service;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import com.project.shopcart.serviceinterface.ICartService;
+
+public class CartService implements ICartService{
+	
+	JdbcTemplate jdbcTemplate;
+	
+	public JdbcTemplate getJdbcTemplate() {
+		return jdbcTemplate;
+	}
+
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	@Override
+	public void add(int productId) {
+		String sqlQuery = "insert into UserTransactionsDetails values (?,?,?,?,?,?)";
+		jdbcTemplate.update(sqlQuery);
+		
+	}
+
+	
+
+}

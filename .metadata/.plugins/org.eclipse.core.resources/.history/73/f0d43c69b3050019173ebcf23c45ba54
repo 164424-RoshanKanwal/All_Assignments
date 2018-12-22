@@ -1,0 +1,15 @@
+package com.project.shopcart.service;
+
+public class ProductService {
+
+	public List<Products> getAllProducts()
+	{	
+		return dao.getAll();	
+	}
+
+	public ProductBean getProductDetails(long productId)
+	{
+		return dao.get(productId);
+	}
+	
+}

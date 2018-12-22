@@ -1,20 +1,4 @@
-INDEX VERSION 1.127+C:\Roshan_Kanwal\All_Assignments\.metadata\.plugins\org.eclipse.jdt.core
-1784706911.index
-1303381641.index
-3924426388.index
-3272870318.index
-2075534293.index
-783256266.index
-3377022325.index
-323496269.index
-1417972428.index
-2424887019.index
-2678248588.index
-1889011636.index
-517850528.index
-568523650.index
-1847932847.index
-1773609505.index
-981837304.index
-3922062443.index
-91748587.index
+INDEX VERSION 1.127+C:\RoshanKanwal\All_Assignments\.metadata\.plugins\org.eclipse.jdt.core
+3003559045.index
+2767660031.index
+3858490779.index

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+                                                    
+<mvc:annotation-driven/> <!--  //we are going to use annotations. -->
+
+<context:component-scan base-package="com.roshan.controller"/><!--  //where should we look for our annotations -->
+
+<bean id="listOfUsers" class="com.roshan.dao.ListOfAllUsers">
+<property name="list">
+<list>
+<ref bean="roshan"></ref>
+<ref bean="kanwal"></ref>
+</list>
+
+</property>
+
+
+</bean>
+
+
+<bean id="roshan" class="com.roshan.pojo.UserInfo">
+<property name = "id" value ="1">
+</property>
+<property name = "name" value ="roshan">
+</property>
+</bean> 
+
+<bean id="kanwal" class="com.roshan.pojo.UserInfo">
+<property name = "id" value ="2">
+</property>
+<property name = "name" value ="kanwal">
+</property>
+</bean> 
+
+
+
+ <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+ <property name ="prefix" value ="/WEB-INF/jsp/"></property>
+ <property name = "suffix" value=".jsp"></property>
+ </bean>
+ 
+</beans>

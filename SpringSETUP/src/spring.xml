@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+<bean id = "triangle" class= "com.roshan.springs.basic.Triangle">
+<property name="pointA">
+<bean id ="A" class = "com.roshan.springs.basic.Point">
+<property name ="x" value = "54"></property>
+<property name ="y" value = "6"></property>
+</bean>
+</property>
+
+<property name="pointB" >
+<bean id ="B" class = "com.roshan.springs.basic.Point">
+<property name ="x" value = "45"></property>
+<property name ="y" value = "54"></property>
+</bean></property>
+<property name="pointC">
+<bean id ="C" class = "com.roshan.springs.basic.Point">
+<property name ="x" value = "544"></property>
+<property name ="y" value = "54"></property>
+</bean>
+</property>
+
+</bean>
+
+
+
+
+
+
+
+</beans>

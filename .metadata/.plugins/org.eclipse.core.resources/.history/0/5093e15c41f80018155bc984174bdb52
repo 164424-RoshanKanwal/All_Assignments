@@ -1,5 +1,0 @@
-package com.roshan.error;
-
-public class StackOverFlowError {
-
-}

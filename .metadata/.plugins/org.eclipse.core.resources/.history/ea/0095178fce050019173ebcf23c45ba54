@@ -1,0 +1,5 @@
+package com.project.shopcart.dao;
+
+public class UserTransactionsDetailsImpl {
+
+}

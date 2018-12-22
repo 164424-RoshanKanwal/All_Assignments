@@ -1,0 +1,26 @@
+package com.cg.project.shopingcart.mapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+import com.project.shopcart.pojo.Products;
+
+public class ProductMapper implements RowMapper<Products>{
+	public Products mapRow(ResultSet rs, int arg1) throws SQLException {
+		Products products = new Products();
+		
+		  
+		   products.setProductId(rs.getInt("productId"));
+		   products.setName(rs.getString("name"));
+		   products.setPrice(rs.getInt("price"));
+		   products.setQuantity(rs.getInt("quantity"));
+		   
+		  /* private int productId;
+			private String name;
+			private int price;
+			private int quantity;
+			*/
+	      return products;
+}}

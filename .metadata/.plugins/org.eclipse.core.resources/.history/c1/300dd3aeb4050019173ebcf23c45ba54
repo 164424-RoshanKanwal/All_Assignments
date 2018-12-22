@@ -1,0 +1,37 @@
+package com.project.shopcart.service;
+
+import java.util.List;
+
+import com.project.shopcart.dao.UserDAOImpl;
+import com.project.shopcart.pojo.User;
+
+
+
+public class LoginService implements ILoginService{
+	
+	UserDAOImpl userDaoImpl;
+
+	public UserDAOImpl getUserDaoImpl() {
+		return userDaoImpl;
+	}
+
+	public void setUserDaoImpl(UserDAOImpl userDaoImpl) {
+		this.userDaoImpl = userDaoImpl;
+	}
+
+	public String isValid(String email, String password) {
+	List<User>	userList = userDaoImpl.getAllUsers();
+	String status="Invalid User";
+	for(User user : userList){
+		if(user.getUserEmail().equals(email) && user.getPassword().equals(password)){
+			status =  "Welcome User " + user.getUserName();
+		}
+		
+	}
+	return status;
+	}
+
+	public void addUser(User user) {
+		userDaoImpl.add(user);
+	}
+}

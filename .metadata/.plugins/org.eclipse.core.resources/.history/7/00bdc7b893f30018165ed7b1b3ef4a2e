@@ -1,8 +1,0 @@
-package StreamPractice;
-
-public class Stream3 {
-public static void main(String[] args) {
-	List number = Arrays.asList(2,3,4,5);
-	int even = number.stream().filter(x->x%2==0).reduce(0,(ans,i)-> ans+i);
-}
-}

@@ -1,0 +1,10 @@
+package com.springJdbc.JdbcEx.controller;
+
+public class JdbcController {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext context;
+		
+	}
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+    xmlns:aop="http://www.springframework.org/schema/aop"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+    http://www.springframework.org/schema/aop   
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd "> 
+  
+   <bean id ="customer1" class="com.roshan.assignment1.Customer">
+   <property name="customerId" value="1"></property>
+   <property name="customerName" value="Roshan"></property>
+   <property name="customerContact" value="8234567890"></property>
+   <property name="customerAddress" ref="address"></property>
+   </bean>
+   
+   
+   <bean id="address" class="com.roshan.assignment1.Address">
+   <property name ="street" value ="ABC"></property>
+   <property name ="city" value ="Bangalore"></property>
+   <property name ="state" value ="Karnataka"></property>
+   <property name ="zip" value ="560048"></property>
+   <property name ="country" value ="India"></property>
+   </bean>
+  
+ <aop:aspectj-autoproxy/>
+ <!-- <bean class="org.springframework.aop.aspectj.annotation.AnnotationAwareAspectJAutoProxyCreator">
+  </bean> -->
+    <bean name="logger" class="com.roshan.assignment2.aspect.Logger"></bean>
+  
+  </beans>
