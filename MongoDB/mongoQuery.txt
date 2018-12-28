@@ -1,0 +1,2359 @@
+Microsoft Windows [Version 10.0.16299.846]
+(c) 2017 Microsoft Corporation. All rights reserved.
+
+C:\Program Files\MongoDB\Server\4.0\bin>mongo
+MongoDB shell version v4.0.2
+connecting to: mongodb://127.0.0.1:27017
+MongoDB server version: 4.0.2
+Server has startup warnings:
+2018-12-22T05:03:08.173+0530 I CONTROL  [initandlisten]
+2018-12-22T05:03:08.173+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2018-12-22T05:03:08.173+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2018-12-22T05:03:08.174+0530 I CONTROL  [initandlisten]
+MongoDB Enterprise > show dbs
+admin           0.000GB
+bank            0.000GB
+config          0.000GB
+detail          0.000GB
+local           0.000GB
+mongo_practice  0.000GB
+population      0.002GB
+technicalkeeda  0.000GB
+test            0.000GB
+testdb          0.000GB
+user            0.000GB
+MongoDB Enterprise > show collections
+Bank
+Banking
+mongo_practice
+MongoDB Enterprise > db.zipcodes.find().pretty()
+MongoDB Enterprise > use population
+switched to db population
+MongoDB Enterprise > show collections
+zipcodes
+MongoDB Enterprise > db.zipcodes.find().pretty();
+{
+        "_id" : "01007",
+        "city" : "BELCHERTOWN",
+        "loc" : [
+                -72.410953,
+                42.275103
+        ],
+        "pop" : 10579,
+        "state" : "MA"
+}
+{
+        "_id" : "01005",
+        "city" : "BARRE",
+        "loc" : [
+                -72.108354,
+                42.409698
+        ],
+        "pop" : 4546,
+        "state" : "MA"
+}
+{
+        "_id" : "01008",
+        "city" : "BLANDFORD",
+        "loc" : [
+                -72.936114,
+                42.182949
+        ],
+        "pop" : 1240,
+        "state" : "MA"
+}
+{
+        "_id" : "01010",
+        "city" : "BRIMFIELD",
+        "loc" : [
+                -72.188455,
+                42.116543
+        ],
+        "pop" : 3706,
+        "state" : "MA"
+}
+{
+        "_id" : "01011",
+        "city" : "CHESTER",
+        "loc" : [
+                -72.988761,
+                42.279421
+        ],
+        "pop" : 1688,
+        "state" : "MA"
+}
+{
+        "_id" : "01012",
+        "city" : "CHESTERFIELD",
+        "loc" : [
+                -72.833309,
+                42.38167
+        ],
+        "pop" : 177,
+        "state" : "MA"
+}
+{
+        "_id" : "01001",
+        "city" : "AGAWAM",
+        "loc" : [
+                -72.622739,
+                42.070206
+        ],
+        "pop" : 15338,
+        "state" : "MA"
+}
+{
+        "_id" : "01002",
+        "city" : "CUSHMAN",
+        "loc" : [
+                -72.51565,
+                42.377017
+        ],
+        "pop" : 36963,
+        "state" : "MA"
+}
+{
+        "_id" : "01026",
+        "city" : "CUMMINGTON",
+        "loc" : [
+                -72.905767,
+                42.435296
+        ],
+        "pop" : 1484,
+        "state" : "MA"
+}
+{
+        "_id" : "01027",
+        "city" : "MOUNT TOM",
+        "loc" : [
+                -72.679921,
+                42.264319
+        ],
+        "pop" : 16864,
+        "state" : "MA"
+}
+{
+        "_id" : "01028",
+        "city" : "EAST LONGMEADOW",
+        "loc" : [
+                -72.505565,
+                42.067203
+        ],
+        "pop" : 13367,
+        "state" : "MA"
+}
+{
+        "_id" : "01020",
+        "city" : "CHICOPEE",
+        "loc" : [
+                -72.576142,
+                42.176443
+        ],
+        "pop" : 31495,
+        "state" : "MA"
+}
+{
+        "_id" : "01030",
+        "city" : "FEEDING HILLS",
+        "loc" : [
+                -72.675077,
+                42.07182
+        ],
+        "pop" : 11985,
+        "state" : "MA"
+}
+{
+        "_id" : "01031",
+        "city" : "GILBERTVILLE",
+        "loc" : [
+                -72.198585,
+                42.332194
+        ],
+        "pop" : 2385,
+        "state" : "MA"
+}
+{
+        "_id" : "01032",
+        "city" : "GOSHEN",
+        "loc" : [
+                -72.844092,
+                42.466234
+        ],
+        "pop" : 122,
+        "state" : "MA"
+}
+{
+        "_id" : "01022",
+        "city" : "WESTOVER AFB",
+        "loc" : [
+                -72.558657,
+                42.196672
+        ],
+        "pop" : 1764,
+        "state" : "MA"
+}
+{
+        "_id" : "01013",
+        "city" : "CHICOPEE",
+        "loc" : [
+                -72.607962,
+                42.162046
+        ],
+        "pop" : 23396,
+        "state" : "MA"
+}
+{
+        "_id" : "01035",
+        "city" : "HADLEY",
+        "loc" : [
+                -72.571499,
+                42.36062
+        ],
+        "pop" : 4231,
+        "state" : "MA"
+}
+{
+        "_id" : "01036",
+        "city" : "HAMPDEN",
+        "loc" : [
+                -72.431823,
+                42.064756
+        ],
+        "pop" : 4709,
+        "state" : "MA"
+}
+{
+        "_id" : "01033",
+        "city" : "GRANBY",
+        "loc" : [
+                -72.520001,
+                42.255704
+        ],
+        "pop" : 5526,
+        "state" : "MA"
+}
+Type "it" for more
+MongoDB Enterprise > it
+{
+        "_id" : "01034",
+        "city" : "TOLLAND",
+        "loc" : [
+                -72.908793,
+                42.070234
+        ],
+        "pop" : 1652,
+        "state" : "MA"
+}
+{
+        "_id" : "01038",
+        "city" : "HATFIELD",
+        "loc" : [
+                -72.616735,
+                42.38439
+        ],
+        "pop" : 3184,
+        "state" : "MA"
+}
+{
+        "_id" : "01039",
+        "city" : "HAYDENVILLE",
+        "loc" : [
+                -72.703178,
+                42.381799
+        ],
+        "pop" : 1387,
+        "state" : "MA"
+}
+{
+        "_id" : "01040",
+        "city" : "HOLYOKE",
+        "loc" : [
+                -72.626193,
+                42.202007
+        ],
+        "pop" : 43704,
+        "state" : "MA"
+}
+{
+        "_id" : "01050",
+        "city" : "HUNTINGTON",
+        "loc" : [
+                -72.873341,
+                42.265301
+        ],
+        "pop" : 2084,
+        "state" : "MA"
+}
+{
+        "_id" : "01053",
+        "city" : "LEEDS",
+        "loc" : [
+                -72.703403,
+                42.354292
+        ],
+        "pop" : 1350,
+        "state" : "MA"
+}
+{
+        "_id" : "01054",
+        "city" : "LEVERETT",
+        "loc" : [
+                -72.499334,
+                42.46823
+        ],
+        "pop" : 1748,
+        "state" : "MA"
+}
+{
+        "_id" : "01057",
+        "city" : "MONSON",
+        "loc" : [
+                -72.319634,
+                42.101017
+        ],
+        "pop" : 8194,
+        "state" : "MA"
+}
+{
+        "_id" : "01060",
+        "city" : "FLORENCE",
+        "loc" : [
+                -72.654245,
+                42.324662
+        ],
+        "pop" : 27939,
+        "state" : "MA"
+}
+{
+        "_id" : "01056",
+        "city" : "LUDLOW",
+        "loc" : [
+                -72.471012,
+                42.172823
+        ],
+        "pop" : 18820,
+        "state" : "MA"
+}
+{
+        "_id" : "01068",
+        "city" : "OAKHAM",
+        "loc" : [
+                -72.051265,
+                42.348033
+        ],
+        "pop" : 1503,
+        "state" : "MA"
+}
+{
+        "_id" : "01069",
+        "city" : "PALMER",
+        "loc" : [
+                -72.328785,
+                42.176233
+        ],
+        "pop" : 9778,
+        "state" : "MA"
+}
+{
+        "_id" : "01071",
+        "city" : "RUSSELL",
+        "loc" : [
+                -72.840343,
+                42.147063
+        ],
+        "pop" : 608,
+        "state" : "MA"
+}
+{
+        "_id" : "01070",
+        "city" : "PLAINFIELD",
+        "loc" : [
+                -72.918289,
+                42.514393
+        ],
+        "pop" : 571,
+        "state" : "MA"
+}
+{
+        "_id" : "01075",
+        "city" : "SOUTH HADLEY",
+        "loc" : [
+                -72.581137,
+                42.237537
+        ],
+        "pop" : 16699,
+        "state" : "MA"
+}
+{
+        "_id" : "01072",
+        "city" : "SHUTESBURY",
+        "loc" : [
+                -72.421342,
+                42.481968
+        ],
+        "pop" : 1533,
+        "state" : "MA"
+}
+{
+        "_id" : "01073",
+        "city" : "SOUTHAMPTON",
+        "loc" : [
+                -72.719381,
+                42.224697
+        ],
+        "pop" : 4478,
+        "state" : "MA"
+}
+{
+        "_id" : "01082",
+        "city" : "WARE",
+        "loc" : [
+                -72.258285,
+                42.261831
+        ],
+        "pop" : 9808,
+        "state" : "MA"
+}
+{
+        "_id" : "01081",
+        "city" : "WALES",
+        "loc" : [
+                -72.204592,
+                42.062734
+        ],
+        "pop" : 1732,
+        "state" : "MA"
+}
+{
+        "_id" : "01085",
+        "city" : "MONTGOMERY",
+        "loc" : [
+                -72.754318,
+                42.129484
+        ],
+        "pop" : 40117,
+        "state" : "MA"
+}
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.find({"city":"atlanta"}).pretty();
+MongoDB Enterprise > db.zipcodes.find({"city":"ATLANTA"}).pretty();
+{
+        "_id" : "14808",
+        "city" : "ATLANTA",
+        "loc" : [
+                -77.480091,
+                42.556269
+        ],
+        "pop" : 472,
+        "state" : "NY"
+}
+{
+        "_id" : "30303",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.388846,
+                33.752504
+        ],
+        "pop" : 1845,
+        "state" : "GA"
+}
+{
+        "_id" : "30305",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.385145,
+                33.831963
+        ],
+        "pop" : 19122,
+        "state" : "GA"
+}
+{
+        "_id" : "30306",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.351418,
+                33.786027
+        ],
+        "pop" : 20081,
+        "state" : "GA"
+}
+{
+        "_id" : "30307",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.335957,
+                33.769138
+        ],
+        "pop" : 16330,
+        "state" : "GA"
+}
+{
+        "_id" : "30308",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.375744,
+                33.771839
+        ],
+        "pop" : 8549,
+        "state" : "GA"
+}
+{
+        "_id" : "30309",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.388338,
+                33.798407
+        ],
+        "pop" : 14766,
+        "state" : "GA"
+}
+{
+        "_id" : "30310",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.423173,
+                33.727849
+        ],
+        "pop" : 34017,
+        "state" : "GA"
+}
+{
+        "_id" : "30313",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.39352,
+                33.76825
+        ],
+        "pop" : 8038,
+        "state" : "GA"
+}
+{
+        "_id" : "30314",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.425546,
+                33.756103
+        ],
+        "pop" : 26649,
+        "state" : "GA"
+}
+{
+        "_id" : "30315",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.380771,
+                33.705062
+        ],
+        "pop" : 41061,
+        "state" : "GA"
+}
+{
+        "_id" : "30316",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.333913,
+                33.721686
+        ],
+        "pop" : 34668,
+        "state" : "GA"
+}
+{
+        "_id" : "30317",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.31685,
+                33.749788
+        ],
+        "pop" : 16395,
+        "state" : "GA"
+}
+{
+        "_id" : "30318",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.445432,
+                33.786454
+        ],
+        "pop" : 53894,
+        "state" : "GA"
+}
+{
+        "_id" : "30312",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.378125,
+                33.746749
+        ],
+        "pop" : 17683,
+        "state" : "GA"
+}
+{
+        "_id" : "30319",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.335091,
+                33.868728
+        ],
+        "pop" : 32138,
+        "state" : "GA"
+}
+{
+        "_id" : "30327",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.419966,
+                33.862723
+        ],
+        "pop" : 18467,
+        "state" : "GA"
+}
+{
+        "_id" : "30326",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.358232,
+                33.848168
+        ],
+        "pop" : 125,
+        "state" : "GA"
+}
+{
+        "_id" : "30311",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.470219,
+                33.722957
+        ],
+        "pop" : 34880,
+        "state" : "GA"
+}
+{
+        "_id" : "30324",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.354867,
+                33.820609
+        ],
+        "pop" : 15044,
+        "state" : "GA"
+}
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.find({"city":"ATLANTA"},{"pop":"1"}).pretty();
+{ "_id" : "14808", "pop" : 472 }
+{ "_id" : "30303", "pop" : 1845 }
+{ "_id" : "30305", "pop" : 19122 }
+{ "_id" : "30306", "pop" : 20081 }
+{ "_id" : "30307", "pop" : 16330 }
+{ "_id" : "30308", "pop" : 8549 }
+{ "_id" : "30309", "pop" : 14766 }
+{ "_id" : "30310", "pop" : 34017 }
+{ "_id" : "30313", "pop" : 8038 }
+{ "_id" : "30314", "pop" : 26649 }
+{ "_id" : "30315", "pop" : 41061 }
+{ "_id" : "30316", "pop" : 34668 }
+{ "_id" : "30317", "pop" : 16395 }
+{ "_id" : "30318", "pop" : 53894 }
+{ "_id" : "30312", "pop" : 17683 }
+{ "_id" : "30319", "pop" : 32138 }
+{ "_id" : "30327", "pop" : 18467 }
+{ "_id" : "30326", "pop" : 125 }
+{ "_id" : "30311", "pop" : 34880 }
+{ "_id" : "30324", "pop" : 15044 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.find({"city":"ATLANTA"},{}).pretty();
+{
+        "_id" : "14808",
+        "city" : "ATLANTA",
+        "loc" : [
+                -77.480091,
+                42.556269
+        ],
+        "pop" : 472,
+        "state" : "NY"
+}
+{
+        "_id" : "30303",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.388846,
+                33.752504
+        ],
+        "pop" : 1845,
+        "state" : "GA"
+}
+{
+        "_id" : "30305",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.385145,
+                33.831963
+        ],
+        "pop" : 19122,
+        "state" : "GA"
+}
+{
+        "_id" : "30306",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.351418,
+                33.786027
+        ],
+        "pop" : 20081,
+        "state" : "GA"
+}
+{
+        "_id" : "30307",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.335957,
+                33.769138
+        ],
+        "pop" : 16330,
+        "state" : "GA"
+}
+{
+        "_id" : "30308",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.375744,
+                33.771839
+        ],
+        "pop" : 8549,
+        "state" : "GA"
+}
+{
+        "_id" : "30309",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.388338,
+                33.798407
+        ],
+        "pop" : 14766,
+        "state" : "GA"
+}
+{
+        "_id" : "30310",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.423173,
+                33.727849
+        ],
+        "pop" : 34017,
+        "state" : "GA"
+}
+{
+        "_id" : "30313",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.39352,
+                33.76825
+        ],
+        "pop" : 8038,
+        "state" : "GA"
+}
+{
+        "_id" : "30314",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.425546,
+                33.756103
+        ],
+        "pop" : 26649,
+        "state" : "GA"
+}
+{
+        "_id" : "30315",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.380771,
+                33.705062
+        ],
+        "pop" : 41061,
+        "state" : "GA"
+}
+{
+        "_id" : "30316",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.333913,
+                33.721686
+        ],
+        "pop" : 34668,
+        "state" : "GA"
+}
+{
+        "_id" : "30317",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.31685,
+                33.749788
+        ],
+        "pop" : 16395,
+        "state" : "GA"
+}
+{
+        "_id" : "30318",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.445432,
+                33.786454
+        ],
+        "pop" : 53894,
+        "state" : "GA"
+}
+{
+        "_id" : "30312",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.378125,
+                33.746749
+        ],
+        "pop" : 17683,
+        "state" : "GA"
+}
+{
+        "_id" : "30319",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.335091,
+                33.868728
+        ],
+        "pop" : 32138,
+        "state" : "GA"
+}
+{
+        "_id" : "30327",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.419966,
+                33.862723
+        ],
+        "pop" : 18467,
+        "state" : "GA"
+}
+{
+        "_id" : "30326",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.358232,
+                33.848168
+        ],
+        "pop" : 125,
+        "state" : "GA"
+}
+{
+        "_id" : "30311",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.470219,
+                33.722957
+        ],
+        "pop" : 34880,
+        "state" : "GA"
+}
+{
+        "_id" : "30324",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.354867,
+                33.820609
+        ],
+        "pop" : 15044,
+        "state" : "GA"
+}
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.find({"city":"ATLANTA"},{"pop":0}).pretty();
+{
+        "_id" : "14808",
+        "city" : "ATLANTA",
+        "loc" : [
+                -77.480091,
+                42.556269
+        ],
+        "state" : "NY"
+}
+{
+        "_id" : "30303",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.388846,
+                33.752504
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30305",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.385145,
+                33.831963
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30306",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.351418,
+                33.786027
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30307",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.335957,
+                33.769138
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30308",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.375744,
+                33.771839
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30309",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.388338,
+                33.798407
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30310",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.423173,
+                33.727849
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30313",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.39352,
+                33.76825
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30314",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.425546,
+                33.756103
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30315",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.380771,
+                33.705062
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30316",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.333913,
+                33.721686
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30317",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.31685,
+                33.749788
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30318",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.445432,
+                33.786454
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30312",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.378125,
+                33.746749
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30319",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.335091,
+                33.868728
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30327",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.419966,
+                33.862723
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30326",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.358232,
+                33.848168
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30311",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.470219,
+                33.722957
+        ],
+        "state" : "GA"
+}
+{
+        "_id" : "30324",
+        "city" : "ATLANTA",
+        "loc" : [
+                -84.354867,
+                33.820609
+        ],
+        "state" : "GA"
+}
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate({$match : {city: "ATLANTA"}})
+{ "_id" : "14808", "city" : "ATLANTA", "loc" : [ -77.480091, 42.556269 ], "pop" : 472, "state" : "NY" }
+{ "_id" : "30303", "city" : "ATLANTA", "loc" : [ -84.388846, 33.752504 ], "pop" : 1845, "state" : "GA" }
+{ "_id" : "30305", "city" : "ATLANTA", "loc" : [ -84.385145, 33.831963 ], "pop" : 19122, "state" : "GA" }
+{ "_id" : "30306", "city" : "ATLANTA", "loc" : [ -84.351418, 33.786027 ], "pop" : 20081, "state" : "GA" }
+{ "_id" : "30307", "city" : "ATLANTA", "loc" : [ -84.335957, 33.769138 ], "pop" : 16330, "state" : "GA" }
+{ "_id" : "30308", "city" : "ATLANTA", "loc" : [ -84.375744, 33.771839 ], "pop" : 8549, "state" : "GA" }
+{ "_id" : "30309", "city" : "ATLANTA", "loc" : [ -84.388338, 33.798407 ], "pop" : 14766, "state" : "GA" }
+{ "_id" : "30310", "city" : "ATLANTA", "loc" : [ -84.423173, 33.727849 ], "pop" : 34017, "state" : "GA" }
+{ "_id" : "30313", "city" : "ATLANTA", "loc" : [ -84.39352, 33.76825 ], "pop" : 8038, "state" : "GA" }
+{ "_id" : "30314", "city" : "ATLANTA", "loc" : [ -84.425546, 33.756103 ], "pop" : 26649, "state" : "GA" }
+{ "_id" : "30315", "city" : "ATLANTA", "loc" : [ -84.380771, 33.705062 ], "pop" : 41061, "state" : "GA" }
+{ "_id" : "30316", "city" : "ATLANTA", "loc" : [ -84.333913, 33.721686 ], "pop" : 34668, "state" : "GA" }
+{ "_id" : "30317", "city" : "ATLANTA", "loc" : [ -84.31685, 33.749788 ], "pop" : 16395, "state" : "GA" }
+{ "_id" : "30318", "city" : "ATLANTA", "loc" : [ -84.445432, 33.786454 ], "pop" : 53894, "state" : "GA" }
+{ "_id" : "30312", "city" : "ATLANTA", "loc" : [ -84.378125, 33.746749 ], "pop" : 17683, "state" : "GA" }
+{ "_id" : "30319", "city" : "ATLANTA", "loc" : [ -84.335091, 33.868728 ], "pop" : 32138, "state" : "GA" }
+{ "_id" : "30327", "city" : "ATLANTA", "loc" : [ -84.419966, 33.862723 ], "pop" : 18467, "state" : "GA" }
+{ "_id" : "30326", "city" : "ATLANTA", "loc" : [ -84.358232, 33.848168 ], "pop" : 125, "state" : "GA" }
+{ "_id" : "30311", "city" : "ATLANTA", "loc" : [ -84.470219, 33.722957 ], "pop" : 34880, "state" : "GA" }
+{ "_id" : "30324", "city" : "ATLANTA", "loc" : [ -84.354867, 33.820609 ], "pop" : 15044, "state" : "GA" }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate({$match : {city: "ATLANTA"}},{$sum: "$pop"})
+2018-12-28T12:11:53.011+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "Unrecognized pipeline stage name: '$sum'",
+        "code" : 40324,
+        "codeName" : "Location40324"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate({$match : {city: "ATLANTA"}},{$sum: $pop})
+2018-12-28T12:12:02.689+0530 E QUERY    [js] ReferenceError: $pop is not defined :
+@(shell):1:53
+MongoDB Enterprise > db.zipcodes.aggregate({$match : {city: "ATLANTA"}},{$sum: pop})
+2018-12-28T12:13:10.994+0530 E QUERY    [js] ReferenceError: pop is not defined :
+@(shell):1:53
+MongoDB Enterprise > db.zipcodes.aggregate({$match : {city: "ATLANTA"}},{$group:{$sum:$pop} })
+2018-12-28T12:16:15.988+0530 E QUERY    [js] ReferenceError: $pop is not defined :
+@(shell):1:61
+MongoDB Enterprise > db.zipcodes.aggregate({$match : {city: "ATLANTA"}},{$group:{$sum:pop} })
+2018-12-28T12:16:21.684+0530 E QUERY    [js] ReferenceError: pop is not defined :
+@(shell):1:61
+MongoDB Enterprise > db.zipcodes.aggregate({$match : {city: "ATLANTA"}},{$group:{$sum:"$pop"}})
+2018-12-28T12:17:52.190+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "The field '$sum' must be an accumulator object",
+        "code" : 40234,
+        "codeName" : "Location40234"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate({$match : {city: "ATLANTA"}},{$group:{{total:{$sum:"$pop"}}})
+...
+...
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.zipcodes.aggregate({$match : {city: "ATLANTA"}},{$group:{total:{$sum:"$pop"}}})
+2018-12-28T12:19:36.295+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "a group specification must include an _id",
+        "code" : 15955,
+        "codeName" : "Location15955"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate({$match : {city: "ATLANTA"}},{$group:{{"_id":"$_id"},{total:{$sum:"$pop"}}}})
+2018-12-28T12:20:36.439+0530 E QUERY    [js] SyntaxError: invalid property id @(shell):1:60
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{city:"ATLANTA"}}])
+{ "_id" : "14808", "city" : "ATLANTA", "loc" : [ -77.480091, 42.556269 ], "pop" : 472, "state" : "NY" }
+{ "_id" : "30303", "city" : "ATLANTA", "loc" : [ -84.388846, 33.752504 ], "pop" : 1845, "state" : "GA" }
+{ "_id" : "30305", "city" : "ATLANTA", "loc" : [ -84.385145, 33.831963 ], "pop" : 19122, "state" : "GA" }
+{ "_id" : "30306", "city" : "ATLANTA", "loc" : [ -84.351418, 33.786027 ], "pop" : 20081, "state" : "GA" }
+{ "_id" : "30307", "city" : "ATLANTA", "loc" : [ -84.335957, 33.769138 ], "pop" : 16330, "state" : "GA" }
+{ "_id" : "30308", "city" : "ATLANTA", "loc" : [ -84.375744, 33.771839 ], "pop" : 8549, "state" : "GA" }
+{ "_id" : "30309", "city" : "ATLANTA", "loc" : [ -84.388338, 33.798407 ], "pop" : 14766, "state" : "GA" }
+{ "_id" : "30310", "city" : "ATLANTA", "loc" : [ -84.423173, 33.727849 ], "pop" : 34017, "state" : "GA" }
+{ "_id" : "30313", "city" : "ATLANTA", "loc" : [ -84.39352, 33.76825 ], "pop" : 8038, "state" : "GA" }
+{ "_id" : "30314", "city" : "ATLANTA", "loc" : [ -84.425546, 33.756103 ], "pop" : 26649, "state" : "GA" }
+{ "_id" : "30315", "city" : "ATLANTA", "loc" : [ -84.380771, 33.705062 ], "pop" : 41061, "state" : "GA" }
+{ "_id" : "30316", "city" : "ATLANTA", "loc" : [ -84.333913, 33.721686 ], "pop" : 34668, "state" : "GA" }
+{ "_id" : "30317", "city" : "ATLANTA", "loc" : [ -84.31685, 33.749788 ], "pop" : 16395, "state" : "GA" }
+{ "_id" : "30318", "city" : "ATLANTA", "loc" : [ -84.445432, 33.786454 ], "pop" : 53894, "state" : "GA" }
+{ "_id" : "30312", "city" : "ATLANTA", "loc" : [ -84.378125, 33.746749 ], "pop" : 17683, "state" : "GA" }
+{ "_id" : "30319", "city" : "ATLANTA", "loc" : [ -84.335091, 33.868728 ], "pop" : 32138, "state" : "GA" }
+{ "_id" : "30327", "city" : "ATLANTA", "loc" : [ -84.419966, 33.862723 ], "pop" : 18467, "state" : "GA" }
+{ "_id" : "30326", "city" : "ATLANTA", "loc" : [ -84.358232, 33.848168 ], "pop" : 125, "state" : "GA" }
+{ "_id" : "30311", "city" : "ATLANTA", "loc" : [ -84.470219, 33.722957 ], "pop" : 34880, "state" : "GA" }
+{ "_id" : "30324", "city" : "ATLANTA", "loc" : [ -84.354867, 33.820609 ], "pop" : 15044, "state" : "GA" }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{"city":"ATLANTA"}}])
+{ "_id" : "14808", "city" : "ATLANTA", "loc" : [ -77.480091, 42.556269 ], "pop" : 472, "state" : "NY" }
+{ "_id" : "30303", "city" : "ATLANTA", "loc" : [ -84.388846, 33.752504 ], "pop" : 1845, "state" : "GA" }
+{ "_id" : "30305", "city" : "ATLANTA", "loc" : [ -84.385145, 33.831963 ], "pop" : 19122, "state" : "GA" }
+{ "_id" : "30306", "city" : "ATLANTA", "loc" : [ -84.351418, 33.786027 ], "pop" : 20081, "state" : "GA" }
+{ "_id" : "30307", "city" : "ATLANTA", "loc" : [ -84.335957, 33.769138 ], "pop" : 16330, "state" : "GA" }
+{ "_id" : "30308", "city" : "ATLANTA", "loc" : [ -84.375744, 33.771839 ], "pop" : 8549, "state" : "GA" }
+{ "_id" : "30309", "city" : "ATLANTA", "loc" : [ -84.388338, 33.798407 ], "pop" : 14766, "state" : "GA" }
+{ "_id" : "30310", "city" : "ATLANTA", "loc" : [ -84.423173, 33.727849 ], "pop" : 34017, "state" : "GA" }
+{ "_id" : "30313", "city" : "ATLANTA", "loc" : [ -84.39352, 33.76825 ], "pop" : 8038, "state" : "GA" }
+{ "_id" : "30314", "city" : "ATLANTA", "loc" : [ -84.425546, 33.756103 ], "pop" : 26649, "state" : "GA" }
+{ "_id" : "30315", "city" : "ATLANTA", "loc" : [ -84.380771, 33.705062 ], "pop" : 41061, "state" : "GA" }
+{ "_id" : "30316", "city" : "ATLANTA", "loc" : [ -84.333913, 33.721686 ], "pop" : 34668, "state" : "GA" }
+{ "_id" : "30317", "city" : "ATLANTA", "loc" : [ -84.31685, 33.749788 ], "pop" : 16395, "state" : "GA" }
+{ "_id" : "30318", "city" : "ATLANTA", "loc" : [ -84.445432, 33.786454 ], "pop" : 53894, "state" : "GA" }
+{ "_id" : "30312", "city" : "ATLANTA", "loc" : [ -84.378125, 33.746749 ], "pop" : 17683, "state" : "GA" }
+{ "_id" : "30319", "city" : "ATLANTA", "loc" : [ -84.335091, 33.868728 ], "pop" : 32138, "state" : "GA" }
+{ "_id" : "30327", "city" : "ATLANTA", "loc" : [ -84.419966, 33.862723 ], "pop" : 18467, "state" : "GA" }
+{ "_id" : "30326", "city" : "ATLANTA", "loc" : [ -84.358232, 33.848168 ], "pop" : 125, "state" : "GA" }
+{ "_id" : "30311", "city" : "ATLANTA", "loc" : [ -84.470219, 33.722957 ], "pop" : 34880, "state" : "GA" }
+{ "_id" : "30324", "city" : "ATLANTA", "loc" : [ -84.354867, 33.820609 ], "pop" : 15044, "state" : "GA" }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{"city":"ATLANTA"}},{$group:{{"id":"$_id"},{total:{$sum:"$pop"}}}}])
+2018-12-28T12:24:26.641+0530 E QUERY    [js] SyntaxError: invalid property id @(shell):1:60
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{"city":"ATLANTA"}},{$group:{{"idOfCIty":"$_id"},{total:{$sum:"$pop"}}}}])
+2018-12-28T12:24:37.265+0530 E QUERY    [js] SyntaxError: invalid property id @(shell):1:60
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{"city":"ATLANTA"}},{$group:{{total:{$sum:"$pop"}}}}])
+2018-12-28T12:24:44.881+0530 E QUERY    [js] SyntaxError: invalid property id @(shell):1:60
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{"city":"ATLANTA"}},{$group:{{total:{$sum:"$pop"}}}}])
+2018-12-28T12:24:55.801+0530 E QUERY    [js] SyntaxError: invalid property id @(shell):1:60
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{"city":"ATLANTA"}},{$group:{{"_id":"$_id"},{total:{$sum:"$pop"}}}}])
+2018-12-28T12:25:53.353+0530 E QUERY    [js] SyntaxError: invalid property id @(shell):1:60
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{"city":"ATLANTA"}},{$group:{{"_id":$_id},{total:{$sum:"$pop"}}}}])
+2018-12-28T12:26:15.657+0530 E QUERY    [js] SyntaxError: invalid property id @(shell):1:60
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{"city":"ATLANTA"}},{$group:{{_id:$_id},{total:{$sum:"$pop"}}}}])
+2018-12-28T12:26:24.082+0530 E QUERY    [js] SyntaxError: invalid property id @(shell):1:60
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{"city":"ATLANTA"}},{$group:{{_id:$_id},{total:{$sum:"$pop"}}}}])
+2018-12-28T12:27:03.002+0530 E QUERY    [js] SyntaxError: invalid property id @(shell):1:60
+MongoDB Enterprise > db.zipcodes.aggregate({$group:{$sum:"pop"}})
+2018-12-28T12:27:59.883+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "The field '$sum' must be an accumulator object",
+        "code" : 40234,
+        "codeName" : "Location40234"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate({$group:{total:{$sum:"pop"}}})
+2018-12-28T12:28:17.043+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "a group specification must include an _id",
+        "code" : 15955,
+        "codeName" : "Location15955"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate({$group:{_id : "$_id",total:{$sum:"pop"}}})
+{ "_id" : "99950", "total" : 0 }
+{ "_id" : "99921", "total" : 0 }
+{ "_id" : "99927", "total" : 0 }
+{ "_id" : "99926", "total" : 0 }
+{ "_id" : "99925", "total" : 0 }
+{ "_id" : "99923", "total" : 0 }
+{ "_id" : "99833", "total" : 0 }
+{ "_id" : "99835", "total" : 0 }
+{ "_id" : "99783", "total" : 0 }
+{ "_id" : "99778", "total" : 0 }
+{ "_id" : "99774", "total" : 0 }
+{ "_id" : "99773", "total" : 0 }
+{ "_id" : "99772", "total" : 0 }
+{ "_id" : "99770", "total" : 0 }
+{ "_id" : "99768", "total" : 0 }
+{ "_id" : "99767", "total" : 0 }
+{ "_id" : "99761", "total" : 0 }
+{ "_id" : "99759", "total" : 0 }
+{ "_id" : "99757", "total" : 0 }
+{ "_id" : "99756", "total" : 0 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$group:{total:{$sum:"$pop"}}}])
+2018-12-28T12:30:31.908+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "a group specification must include an _id",
+        "code" : 15955,
+        "codeName" : "Location15955"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$group:{_id:"_id",total:{$sum:"$pop"}}}])
+{ "_id" : "_id", "total" : 630046 }
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$group:{_id:"_id",total:{$sum:1}}}])
+{ "_id" : "_id", "total" : 41 }
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$group:{_id:"_id",zip:{$sum:1}}}])
+{ "_id" : "_id", "zip" : 41 }
+MongoDB Enterprise > db.zipcodes.aggregate({$match:{city:"ATLANTA"}})
+{ "_id" : "14808", "city" : "ATLANTA", "loc" : [ -77.480091, 42.556269 ], "pop" : 472, "state" : "NY" }
+{ "_id" : "30303", "city" : "ATLANTA", "loc" : [ -84.388846, 33.752504 ], "pop" : 1845, "state" : "GA" }
+{ "_id" : "30305", "city" : "ATLANTA", "loc" : [ -84.385145, 33.831963 ], "pop" : 19122, "state" : "GA" }
+{ "_id" : "30306", "city" : "ATLANTA", "loc" : [ -84.351418, 33.786027 ], "pop" : 20081, "state" : "GA" }
+{ "_id" : "30307", "city" : "ATLANTA", "loc" : [ -84.335957, 33.769138 ], "pop" : 16330, "state" : "GA" }
+{ "_id" : "30308", "city" : "ATLANTA", "loc" : [ -84.375744, 33.771839 ], "pop" : 8549, "state" : "GA" }
+{ "_id" : "30309", "city" : "ATLANTA", "loc" : [ -84.388338, 33.798407 ], "pop" : 14766, "state" : "GA" }
+{ "_id" : "30310", "city" : "ATLANTA", "loc" : [ -84.423173, 33.727849 ], "pop" : 34017, "state" : "GA" }
+{ "_id" : "30313", "city" : "ATLANTA", "loc" : [ -84.39352, 33.76825 ], "pop" : 8038, "state" : "GA" }
+{ "_id" : "30314", "city" : "ATLANTA", "loc" : [ -84.425546, 33.756103 ], "pop" : 26649, "state" : "GA" }
+{ "_id" : "30315", "city" : "ATLANTA", "loc" : [ -84.380771, 33.705062 ], "pop" : 41061, "state" : "GA" }
+{ "_id" : "30316", "city" : "ATLANTA", "loc" : [ -84.333913, 33.721686 ], "pop" : 34668, "state" : "GA" }
+{ "_id" : "30317", "city" : "ATLANTA", "loc" : [ -84.31685, 33.749788 ], "pop" : 16395, "state" : "GA" }
+{ "_id" : "30318", "city" : "ATLANTA", "loc" : [ -84.445432, 33.786454 ], "pop" : 53894, "state" : "GA" }
+{ "_id" : "30312", "city" : "ATLANTA", "loc" : [ -84.378125, 33.746749 ], "pop" : 17683, "state" : "GA" }
+{ "_id" : "30319", "city" : "ATLANTA", "loc" : [ -84.335091, 33.868728 ], "pop" : 32138, "state" : "GA" }
+{ "_id" : "30327", "city" : "ATLANTA", "loc" : [ -84.419966, 33.862723 ], "pop" : 18467, "state" : "GA" }
+{ "_id" : "30326", "city" : "ATLANTA", "loc" : [ -84.358232, 33.848168 ], "pop" : 125, "state" : "GA" }
+{ "_id" : "30311", "city" : "ATLANTA", "loc" : [ -84.470219, 33.722957 ], "pop" : 34880, "state" : "GA" }
+{ "_id" : "30324", "city" : "ATLANTA", "loc" : [ -84.354867, 33.820609 ], "pop" : 15044, "state" : "GA" }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.find();
+{ "_id" : "01007", "city" : "BELCHERTOWN", "loc" : [ -72.410953, 42.275103 ], "pop" : 10579, "state" : "MA" }
+{ "_id" : "01005", "city" : "BARRE", "loc" : [ -72.108354, 42.409698 ], "pop" : 4546, "state" : "MA" }
+{ "_id" : "01008", "city" : "BLANDFORD", "loc" : [ -72.936114, 42.182949 ], "pop" : 1240, "state" : "MA" }
+{ "_id" : "01010", "city" : "BRIMFIELD", "loc" : [ -72.188455, 42.116543 ], "pop" : 3706, "state" : "MA" }
+{ "_id" : "01011", "city" : "CHESTER", "loc" : [ -72.988761, 42.279421 ], "pop" : 1688, "state" : "MA" }
+{ "_id" : "01012", "city" : "CHESTERFIELD", "loc" : [ -72.833309, 42.38167 ], "pop" : 177, "state" : "MA" }
+{ "_id" : "01001", "city" : "AGAWAM", "loc" : [ -72.622739, 42.070206 ], "pop" : 15338, "state" : "MA" }
+{ "_id" : "01002", "city" : "CUSHMAN", "loc" : [ -72.51565, 42.377017 ], "pop" : 36963, "state" : "MA" }
+{ "_id" : "01026", "city" : "CUMMINGTON", "loc" : [ -72.905767, 42.435296 ], "pop" : 1484, "state" : "MA" }
+{ "_id" : "01027", "city" : "MOUNT TOM", "loc" : [ -72.679921, 42.264319 ], "pop" : 16864, "state" : "MA" }
+{ "_id" : "01028", "city" : "EAST LONGMEADOW", "loc" : [ -72.505565, 42.067203 ], "pop" : 13367, "state" : "MA" }
+{ "_id" : "01020", "city" : "CHICOPEE", "loc" : [ -72.576142, 42.176443 ], "pop" : 31495, "state" : "MA" }
+{ "_id" : "01030", "city" : "FEEDING HILLS", "loc" : [ -72.675077, 42.07182 ], "pop" : 11985, "state" : "MA" }
+{ "_id" : "01031", "city" : "GILBERTVILLE", "loc" : [ -72.198585, 42.332194 ], "pop" : 2385, "state" : "MA" }
+{ "_id" : "01032", "city" : "GOSHEN", "loc" : [ -72.844092, 42.466234 ], "pop" : 122, "state" : "MA" }
+{ "_id" : "01022", "city" : "WESTOVER AFB", "loc" : [ -72.558657, 42.196672 ], "pop" : 1764, "state" : "MA" }
+{ "_id" : "01013", "city" : "CHICOPEE", "loc" : [ -72.607962, 42.162046 ], "pop" : 23396, "state" : "MA" }
+{ "_id" : "01035", "city" : "HADLEY", "loc" : [ -72.571499, 42.36062 ], "pop" : 4231, "state" : "MA" }
+{ "_id" : "01036", "city" : "HAMPDEN", "loc" : [ -72.431823, 42.064756 ], "pop" : 4709, "state" : "MA" }
+{ "_id" : "01033", "city" : "GRANBY", "loc" : [ -72.520001, 42.255704 ], "pop" : 5526, "state" : "MA" }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.find().pretty();
+{
+        "_id" : "01007",
+        "city" : "BELCHERTOWN",
+        "loc" : [
+                -72.410953,
+                42.275103
+        ],
+        "pop" : 10579,
+        "state" : "MA"
+}
+{
+        "_id" : "01005",
+        "city" : "BARRE",
+        "loc" : [
+                -72.108354,
+                42.409698
+        ],
+        "pop" : 4546,
+        "state" : "MA"
+}
+{
+        "_id" : "01008",
+        "city" : "BLANDFORD",
+        "loc" : [
+                -72.936114,
+                42.182949
+        ],
+        "pop" : 1240,
+        "state" : "MA"
+}
+{
+        "_id" : "01010",
+        "city" : "BRIMFIELD",
+        "loc" : [
+                -72.188455,
+                42.116543
+        ],
+        "pop" : 3706,
+        "state" : "MA"
+}
+{
+        "_id" : "01011",
+        "city" : "CHESTER",
+        "loc" : [
+                -72.988761,
+                42.279421
+        ],
+        "pop" : 1688,
+        "state" : "MA"
+}
+{
+        "_id" : "01012",
+        "city" : "CHESTERFIELD",
+        "loc" : [
+                -72.833309,
+                42.38167
+        ],
+        "pop" : 177,
+        "state" : "MA"
+}
+{
+        "_id" : "01001",
+        "city" : "AGAWAM",
+        "loc" : [
+                -72.622739,
+                42.070206
+        ],
+        "pop" : 15338,
+        "state" : "MA"
+}
+{
+        "_id" : "01002",
+        "city" : "CUSHMAN",
+        "loc" : [
+                -72.51565,
+                42.377017
+        ],
+        "pop" : 36963,
+        "state" : "MA"
+}
+{
+        "_id" : "01026",
+        "city" : "CUMMINGTON",
+        "loc" : [
+                -72.905767,
+                42.435296
+        ],
+        "pop" : 1484,
+        "state" : "MA"
+}
+{
+        "_id" : "01027",
+        "city" : "MOUNT TOM",
+        "loc" : [
+                -72.679921,
+                42.264319
+        ],
+        "pop" : 16864,
+        "state" : "MA"
+}
+{
+        "_id" : "01028",
+        "city" : "EAST LONGMEADOW",
+        "loc" : [
+                -72.505565,
+                42.067203
+        ],
+        "pop" : 13367,
+        "state" : "MA"
+}
+{
+        "_id" : "01020",
+        "city" : "CHICOPEE",
+        "loc" : [
+                -72.576142,
+                42.176443
+        ],
+        "pop" : 31495,
+        "state" : "MA"
+}
+{
+        "_id" : "01030",
+        "city" : "FEEDING HILLS",
+        "loc" : [
+                -72.675077,
+                42.07182
+        ],
+        "pop" : 11985,
+        "state" : "MA"
+}
+{
+        "_id" : "01031",
+        "city" : "GILBERTVILLE",
+        "loc" : [
+                -72.198585,
+                42.332194
+        ],
+        "pop" : 2385,
+        "state" : "MA"
+}
+{
+        "_id" : "01032",
+        "city" : "GOSHEN",
+        "loc" : [
+                -72.844092,
+                42.466234
+        ],
+        "pop" : 122,
+        "state" : "MA"
+}
+{
+        "_id" : "01022",
+        "city" : "WESTOVER AFB",
+        "loc" : [
+                -72.558657,
+                42.196672
+        ],
+        "pop" : 1764,
+        "state" : "MA"
+}
+{
+        "_id" : "01013",
+        "city" : "CHICOPEE",
+        "loc" : [
+                -72.607962,
+                42.162046
+        ],
+        "pop" : 23396,
+        "state" : "MA"
+}
+{
+        "_id" : "01035",
+        "city" : "HADLEY",
+        "loc" : [
+                -72.571499,
+                42.36062
+        ],
+        "pop" : 4231,
+        "state" : "MA"
+}
+{
+        "_id" : "01036",
+        "city" : "HAMPDEN",
+        "loc" : [
+                -72.431823,
+                42.064756
+        ],
+        "pop" : 4709,
+        "state" : "MA"
+}
+{
+        "_id" : "01033",
+        "city" : "GRANBY",
+        "loc" : [
+                -72.520001,
+                42.255704
+        ],
+        "pop" : 5526,
+        "state" : "MA"
+}
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$group:{_id:"_id",zip:{$sum:1}}}])
+{ "_id" : "_id", "zip" : 41 }
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$group:{_id:"$_id",zip:{$sum:1}}}])
+{ "_id" : "83601", "zip" : 1 }
+{ "_id" : "75551", "zip" : 1 }
+{ "_id" : "71404", "zip" : 1 }
+{ "_id" : "68923", "zip" : 1 }
+{ "_id" : "67008", "zip" : 1 }
+{ "_id" : "63530", "zip" : 1 }
+{ "_id" : "61723", "zip" : 1 }
+{ "_id" : "46031", "zip" : 1 }
+{ "_id" : "30360", "zip" : 1 }
+{ "_id" : "30350", "zip" : 1 }
+{ "_id" : "49709", "zip" : 1 }
+{ "_id" : "30349", "zip" : 1 }
+{ "_id" : "30342", "zip" : 1 }
+{ "_id" : "30339", "zip" : 1 }
+{ "_id" : "30331", "zip" : 1 }
+{ "_id" : "30326", "zip" : 1 }
+{ "_id" : "30327", "zip" : 1 }
+{ "_id" : "30311", "zip" : 1 }
+{ "_id" : "30336", "zip" : 1 }
+{ "_id" : "30330", "zip" : 1 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$group:{_id:123,zip:{$sum:1}}}])
+{ "_id" : 123, "zip" : 41 }
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{city:"ATLANTA"}},{$group:{_id:"All Zip",zip:{$sum:1}}}])
+{ "_id" : "All Zip", "zip" : 41 }
+MongoDB Enterprise > db.zipcodes.aggregate({$group:{_id:state, total_Population:{$sum:$pop} }})
+2018-12-28T12:42:10.532+0530 E QUERY    [js] ReferenceError: state is not defined :
+@(shell):1:32
+MongoDB Enterprise > db.zipcodes.aggregate({$group:{_id:"state", total_Population:{$sum:$pop} }})
+2018-12-28T12:42:31.932+0530 E QUERY    [js] ReferenceError: $pop is not defined :
+@(shell):1:63
+MongoDB Enterprise > db.zipcodes.aggregate({$group:{_id:"state", total_Population:{$sum:"$pop"} }})
+{ "_id" : "state", "total_Population" : 248408400 }
+MongoDB Enterprise > db.zipcodes.aggregate({$group:{_id:"$state", total_Population:{$sum:"$pop"} }})
+{ "_id" : "AK", "total_Population" : 544698 }
+{ "_id" : "AZ", "total_Population" : 3665228 }
+{ "_id" : "UT", "total_Population" : 1722850 }
+{ "_id" : "WY", "total_Population" : 453528 }
+{ "_id" : "CO", "total_Population" : 3293755 }
+{ "_id" : "ID", "total_Population" : 1006749 }
+{ "_id" : "OK", "total_Population" : 3145585 }
+{ "_id" : "AR", "total_Population" : 2350725 }
+{ "_id" : "LA", "total_Population" : 4217595 }
+{ "_id" : "NV", "total_Population" : 1201833 }
+{ "_id" : "NE", "total_Population" : 1578139 }
+{ "_id" : "KS", "total_Population" : 2475285 }
+{ "_id" : "MO", "total_Population" : 5110648 }
+{ "_id" : "IL", "total_Population" : 11427576 }
+{ "_id" : "OH", "total_Population" : 10846517 }
+{ "_id" : "KY", "total_Population" : 3675484 }
+{ "_id" : "IN", "total_Population" : 5544136 }
+{ "_id" : "WI", "total_Population" : 4891769 }
+{ "_id" : "HI", "total_Population" : 1108229 }
+{ "_id" : "MS", "total_Population" : 2573216 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate({$group:{_id:"$state", total_Population:{$sum:"$pop"} }}).sort("total_Population":-1)
+2018-12-28T12:52:54.196+0530 E QUERY    [js] SyntaxError: missing ) after argument list @(shell):1:103
+MongoDB Enterprise > db.zipcodes.aggregate({$group:{_id:"$state", total_Population:{$sum:"$pop"} }}).sort({"total_Population":-1})
+2018-12-28T12:53:05.392+0530 E QUERY    [js] TypeError: db.zipcodes.aggregate(...).sort is not a function :
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate({$group:{_id:"$state", total_Population:{$sum:"$pop"} }})
+{ "_id" : "AK", "total_Population" : 544698 }
+{ "_id" : "AZ", "total_Population" : 3665228 }
+{ "_id" : "UT", "total_Population" : 1722850 }
+{ "_id" : "WY", "total_Population" : 453528 }
+{ "_id" : "CO", "total_Population" : 3293755 }
+{ "_id" : "ID", "total_Population" : 1006749 }
+{ "_id" : "OK", "total_Population" : 3145585 }
+{ "_id" : "AR", "total_Population" : 2350725 }
+{ "_id" : "LA", "total_Population" : 4217595 }
+{ "_id" : "NV", "total_Population" : 1201833 }
+{ "_id" : "NE", "total_Population" : 1578139 }
+{ "_id" : "KS", "total_Population" : 2475285 }
+{ "_id" : "MO", "total_Population" : 5110648 }
+{ "_id" : "IL", "total_Population" : 11427576 }
+{ "_id" : "OH", "total_Population" : 10846517 }
+{ "_id" : "KY", "total_Population" : 3675484 }
+{ "_id" : "IN", "total_Population" : 5544136 }
+{ "_id" : "WI", "total_Population" : 4891769 }
+{ "_id" : "HI", "total_Population" : 1108229 }
+{ "_id" : "MS", "total_Population" : 2573216 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", total_Population:{$sum:"$pop"} }},{$sort:{total_Population:1}}])
+{ "_id" : "WY", "total_Population" : 453528 }
+{ "_id" : "AK", "total_Population" : 544698 }
+{ "_id" : "VT", "total_Population" : 562758 }
+{ "_id" : "DC", "total_Population" : 606900 }
+{ "_id" : "ND", "total_Population" : 638272 }
+{ "_id" : "DE", "total_Population" : 666168 }
+{ "_id" : "SD", "total_Population" : 695397 }
+{ "_id" : "MT", "total_Population" : 798948 }
+{ "_id" : "RI", "total_Population" : 1003218 }
+{ "_id" : "ID", "total_Population" : 1006749 }
+{ "_id" : "HI", "total_Population" : 1108229 }
+{ "_id" : "NH", "total_Population" : 1109252 }
+{ "_id" : "NV", "total_Population" : 1201833 }
+{ "_id" : "ME", "total_Population" : 1226648 }
+{ "_id" : "NM", "total_Population" : 1515069 }
+{ "_id" : "NE", "total_Population" : 1578139 }
+{ "_id" : "UT", "total_Population" : 1722850 }
+{ "_id" : "WV", "total_Population" : 1793146 }
+{ "_id" : "AR", "total_Population" : 2350725 }
+{ "_id" : "KS", "total_Population" : 2475285 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", total_Population:{$sum:"$pop"} }},{$sort:{total_Population:-1}}])
+{ "_id" : "CA", "total_Population" : 29754890 }
+{ "_id" : "NY", "total_Population" : 17990402 }
+{ "_id" : "TX", "total_Population" : 16984601 }
+{ "_id" : "FL", "total_Population" : 12686644 }
+{ "_id" : "PA", "total_Population" : 11881643 }
+{ "_id" : "IL", "total_Population" : 11427576 }
+{ "_id" : "OH", "total_Population" : 10846517 }
+{ "_id" : "MI", "total_Population" : 9295297 }
+{ "_id" : "NJ", "total_Population" : 7730188 }
+{ "_id" : "NC", "total_Population" : 6628637 }
+{ "_id" : "GA", "total_Population" : 6478216 }
+{ "_id" : "VA", "total_Population" : 6181479 }
+{ "_id" : "MA", "total_Population" : 6016425 }
+{ "_id" : "IN", "total_Population" : 5544136 }
+{ "_id" : "MO", "total_Population" : 5110648 }
+{ "_id" : "WI", "total_Population" : 4891769 }
+{ "_id" : "TN", "total_Population" : 4876457 }
+{ "_id" : "WA", "total_Population" : 4866692 }
+{ "_id" : "MD", "total_Population" : 4781379 }
+{ "_id" : "MN", "total_Population" : 4372982 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", total_Population:{$sum:"$pop"} }},{$sort:{total_Population:-1}}]).limit(3)
+2018-12-28T13:42:43.183+0530 E QUERY    [js] TypeError: db.zipcodes.aggregate(...).limit is not a function :
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", total_Population:{$sum:"$pop"} }},{$sort:{total_Population:-1}},{limit:3}])
+2018-12-28T13:43:03.543+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "Unrecognized pipeline stage name: 'limit'",
+        "code" : 40324,
+        "codeName" : "Location40324"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", total_Population:{$sum:"$pop"} }},{$sort:{total_Population:-1}},{$limit:3}])
+{ "_id" : "CA", "total_Population" : 29754890 }
+{ "_id" : "NY", "total_Population" : 17990402 }
+{ "_id" : "TX", "total_Population" : 16984601 }
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}}])
+{ "_id" : { "city" : "CRAIG", "state" : "AK" }, "total" : 1398 }
+{ "_id" : { "city" : "POINT BAKER", "state" : "AK" }, "total" : 426 }
+{ "_id" : { "city" : "HYDABURG", "state" : "AK" }, "total" : 891 }
+{ "_id" : { "city" : "KETCHIKAN", "state" : "AK" }, "total" : 14308 }
+{ "_id" : { "city" : "PETERSBURG", "state" : "AK" }, "total" : 4253 }
+{ "_id" : { "city" : "SITKA", "state" : "AK" }, "total" : 8638 }
+{ "_id" : { "city" : "GUSTAVUS", "state" : "AK" }, "total" : 258 }
+{ "_id" : { "city" : "JUNEAU", "state" : "AK" }, "total" : 24947 }
+{ "_id" : { "city" : "ANGOON", "state" : "AK" }, "total" : 1002 }
+{ "_id" : { "city" : "NUIQSUT", "state" : "AK" }, "total" : 354 }
+{ "_id" : { "city" : "CHALKYITSIK", "state" : "AK" }, "total" : 99 }
+{ "_id" : { "city" : "AMBLER", "state" : "AK" }, "total" : 8 }
+{ "_id" : { "city" : "WHITE MOUNTAIN", "state" : "AK" }, "total" : 194 }
+{ "_id" : { "city" : "TELLER", "state" : "AK" }, "total" : 260 }
+{ "_id" : { "city" : "SHUNGNAK", "state" : "AK" }, "total" : 0 }
+{ "_id" : { "city" : "SHAKTOOLIK", "state" : "AK" }, "total" : 183 }
+{ "_id" : { "city" : "NULATO", "state" : "AK" }, "total" : 492 }
+{ "_id" : { "city" : "RUBY", "state" : "AK" }, "total" : 172 }
+{ "_id" : { "city" : "NOATAK", "state" : "AK" }, "total" : 395 }
+{ "_id" : { "city" : "POINT LAY", "state" : "AK" }, "total" : 139 }
+Type "it" for more
+MongoDB Enterprise > it
+{ "_id" : { "city" : "KOBUK", "state" : "AK" }, "total" : 306 }
+{ "_id" : { "city" : "MANLEY HOT SPRIN", "state" : "AK" }, "total" : 122 }
+{ "_id" : { "city" : "KOYUK", "state" : "AK" }, "total" : 231 }
+{ "_id" : { "city" : "KAKTOVIK", "state" : "AK" }, "total" : 245 }
+{ "_id" : { "city" : "HUGHES", "state" : "AK" }, "total" : 64 }
+{ "_id" : { "city" : "HEALY", "state" : "AK" }, "total" : 1057 }
+{ "_id" : { "city" : "GAMBELL", "state" : "AK" }, "total" : 525 }
+{ "_id" : { "city" : "PRUDHOE BAY", "state" : "AK" }, "total" : 153 }
+{ "_id" : { "city" : "CIRCLE", "state" : "AK" }, "total" : 73 }
+{ "_id" : { "city" : "CANTWELL", "state" : "AK" }, "total" : 210 }
+{ "_id" : { "city" : "BEAVER", "state" : "AK" }, "total" : 103 }
+{ "_id" : { "city" : "BUCKLAND", "state" : "AK" }, "total" : 318 }
+{ "_id" : { "city" : "NORTH POLE", "state" : "AK" }, "total" : 14672 }
+{ "_id" : { "city" : "FORT WAINWRIGHT", "state" : "AK" }, "total" : 6238 }
+{ "_id" : { "city" : "UNALAKLEET", "state" : "AK" }, "total" : 716 }
+{ "_id" : { "city" : "BREVIG MISSION", "state" : "AK" }, "total" : 198 }
+{ "_id" : { "city" : "NIKOLAI", "state" : "AK" }, "total" : 109 }
+{ "_id" : { "city" : "YAKUTAT", "state" : "AK" }, "total" : 705 }
+{ "_id" : { "city" : "SOLDOTNA", "state" : "AK" }, "total" : 9825 }
+{ "_id" : { "city" : "UNALASKA", "state" : "AK" }, "total" : 3089 }
+Type "it" for more
+MongoDB Enterprise > it
+{ "_id" : { "city" : "TRAPPER CREEK", "state" : "AK" }, "total" : 20 }
+{ "_id" : { "city" : "SLEETMUTE", "state" : "AK" }, "total" : 0 }
+{ "_id" : { "city" : "TYONEK", "state" : "AK" }, "total" : 277 }
+{ "_id" : { "city" : "TUNUNAK", "state" : "AK" }, "total" : 889 }
+{ "_id" : { "city" : "STEBBINS", "state" : "AK" }, "total" : 400 }
+{ "_id" : { "city" : "RUSSIAN MISSION", "state" : "AK" }, "total" : 0 }
+{ "_id" : { "city" : "SCAMMON BAY", "state" : "AK" }, "total" : 343 }
+{ "_id" : { "city" : "PILOT STATION", "state" : "AK" }, "total" : 463 }
+{ "_id" : { "city" : "PLATINUM", "state" : "AK" }, "total" : 4 }
+{ "_id" : { "city" : "PILOT POINT", "state" : "AK" }, "total" : 63 }
+{ "_id" : { "city" : "BUTTE", "state" : "AK" }, "total" : 12358 }
+{ "_id" : { "city" : "NONDALTON", "state" : "AK" }, "total" : 233 }
+{ "_id" : { "city" : "NINILCHIK", "state" : "AK" }, "total" : 767 }
+{ "_id" : { "city" : "MOOSE PASS", "state" : "AK" }, "total" : 1649 }
+{ "_id" : { "city" : "LOWER KALSKAG", "state" : "AK" }, "total" : 291 }
+{ "_id" : { "city" : "KWETHLUK", "state" : "AK" }, "total" : 558 }
+{ "_id" : { "city" : "LEVELOCK", "state" : "AK" }, "total" : 204 }
+{ "_id" : { "city" : "HOLY CROSS", "state" : "AK" }, "total" : 277 }
+{ "_id" : { "city" : "KASILOF", "state" : "AK" }, "total" : 963 }
+{ "_id" : { "city" :
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"},{$sort:{}}}}])
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"},{$sort:{}}}])
+MongoDB Enterprise >
+MongoDB Enterprise >
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{"city":1}}])
+{ "_id" : { "city" : "CRAIG", "state" : "AK" }, "total" : 1398 }
+{ "_id" : { "city" : "POINT BAKER", "state" : "AK" }, "total" : 426 }
+{ "_id" : { "city" : "HYDABURG", "state" : "AK" }, "total" : 891 }
+{ "_id" : { "city" : "KETCHIKAN", "state" : "AK" }, "total" : 14308 }
+{ "_id" : { "city" : "PETERSBURG", "state" : "AK" }, "total" : 4253 }
+{ "_id" : { "city" : "SITKA", "state" : "AK" }, "total" : 8638 }
+{ "_id" : { "city" : "GUSTAVUS", "state" : "AK" }, "total" : 258 }
+{ "_id" : { "city" : "JUNEAU", "state" : "AK" }, "total" : 24947 }
+{ "_id" : { "city" : "ANGOON", "state" : "AK" }, "total" : 1002 }
+{ "_id" : { "city" : "NUIQSUT", "state" : "AK" }, "total" : 354 }
+{ "_id" : { "city" : "CHALKYITSIK", "state" : "AK" }, "total" : 99 }
+{ "_id" : { "city" : "AMBLER", "state" : "AK" }, "total" : 8 }
+{ "_id" : { "city" : "WHITE MOUNTAIN", "state" : "AK" }, "total" : 194 }
+{ "_id" : { "city" : "TELLER", "state" : "AK" }, "total" : 260 }
+{ "_id" : { "city" : "SHUNGNAK", "state" : "AK" }, "total" : 0 }
+{ "_id" : { "city" : "SHAKTOOLIK", "state" : "AK" }, "total" : 183 }
+{ "_id" : { "city" : "NULATO", "state" : "AK" }, "total" : 492 }
+{ "_id" : { "city" : "RUBY", "state" : "AK" }, "total" : 172 }
+{ "_id" : { "city" : "NOATAK", "state" : "AK" }, "total" : 395 }
+{ "_id" : { "city" : "POINT LAY", "state" : "AK" }, "total" : 139 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{city:1}}])
+{ "_id" : { "city" : "CRAIG", "state" : "AK" }, "total" : 1398 }
+{ "_id" : { "city" : "POINT BAKER", "state" : "AK" }, "total" : 426 }
+{ "_id" : { "city" : "HYDABURG", "state" : "AK" }, "total" : 891 }
+{ "_id" : { "city" : "KETCHIKAN", "state" : "AK" }, "total" : 14308 }
+{ "_id" : { "city" : "PETERSBURG", "state" : "AK" }, "total" : 4253 }
+{ "_id" : { "city" : "SITKA", "state" : "AK" }, "total" : 8638 }
+{ "_id" : { "city" : "GUSTAVUS", "state" : "AK" }, "total" : 258 }
+{ "_id" : { "city" : "JUNEAU", "state" : "AK" }, "total" : 24947 }
+{ "_id" : { "city" : "ANGOON", "state" : "AK" }, "total" : 1002 }
+{ "_id" : { "city" : "NUIQSUT", "state" : "AK" }, "total" : 354 }
+{ "_id" : { "city" : "CHALKYITSIK", "state" : "AK" }, "total" : 99 }
+{ "_id" : { "city" : "AMBLER", "state" : "AK" }, "total" : 8 }
+{ "_id" : { "city" : "WHITE MOUNTAIN", "state" : "AK" }, "total" : 194 }
+{ "_id" : { "city" : "TELLER", "state" : "AK" }, "total" : 260 }
+{ "_id" : { "city" : "SHUNGNAK", "state" : "AK" }, "total" : 0 }
+{ "_id" : { "city" : "SHAKTOOLIK", "state" : "AK" }, "total" : 183 }
+{ "_id" : { "city" : "NULATO", "state" : "AK" }, "total" : 492 }
+{ "_id" : { "city" : "RUBY", "state" : "AK" }, "total" : 172 }
+{ "_id" : { "city" : "NOATAK", "state" : "AK" }, "total" : 395 }
+{ "_id" : { "city" : "POINT LAY", "state" : "AK" }, "total" : 139 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{pop:1}}])
+{ "_id" : { "city" : "CRAIG", "state" : "AK" }, "total" : 1398 }
+{ "_id" : { "city" : "POINT BAKER", "state" : "AK" }, "total" : 426 }
+{ "_id" : { "city" : "HYDABURG", "state" : "AK" }, "total" : 891 }
+{ "_id" : { "city" : "KETCHIKAN", "state" : "AK" }, "total" : 14308 }
+{ "_id" : { "city" : "PETERSBURG", "state" : "AK" }, "total" : 4253 }
+{ "_id" : { "city" : "SITKA", "state" : "AK" }, "total" : 8638 }
+{ "_id" : { "city" : "GUSTAVUS", "state" : "AK" }, "total" : 258 }
+{ "_id" : { "city" : "JUNEAU", "state" : "AK" }, "total" : 24947 }
+{ "_id" : { "city" : "ANGOON", "state" : "AK" }, "total" : 1002 }
+{ "_id" : { "city" : "NUIQSUT", "state" : "AK" }, "total" : 354 }
+{ "_id" : { "city" : "CHALKYITSIK", "state" : "AK" }, "total" : 99 }
+{ "_id" : { "city" : "AMBLER", "state" : "AK" }, "total" : 8 }
+{ "_id" : { "city" : "WHITE MOUNTAIN", "state" : "AK" }, "total" : 194 }
+{ "_id" : { "city" : "TELLER", "state" : "AK" }, "total" : 260 }
+{ "_id" : { "city" : "SHUNGNAK", "state" : "AK" }, "total" : 0 }
+{ "_id" : { "city" : "SHAKTOOLIK", "state" : "AK" }, "total" : 183 }
+{ "_id" : { "city" : "NULATO", "state" : "AK" }, "total" : 492 }
+{ "_id" : { "city" : "RUBY", "state" : "AK" }, "total" : 172 }
+{ "_id" : { "city" : "NOATAK", "state" : "AK" }, "total" : 395 }
+{ "_id" : { "city" : "POINT LAY", "state" : "AK" }, "total" : 139 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{$pop:1}}])
+2018-12-28T14:08:33.602+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "FieldPath field names may not start with '$'.",
+        "code" : 16410,
+        "codeName" : "Location16410"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{pop:1}}])
+{ "_id" : { "city" : "CRAIG", "state" : "AK" }, "total" : 1398 }
+{ "_id" : { "city" : "POINT BAKER", "state" : "AK" }, "total" : 426 }
+{ "_id" : { "city" : "HYDABURG", "state" : "AK" }, "total" : 891 }
+{ "_id" : { "city" : "KETCHIKAN", "state" : "AK" }, "total" : 14308 }
+{ "_id" : { "city" : "PETERSBURG", "state" : "AK" }, "total" : 4253 }
+{ "_id" : { "city" : "SITKA", "state" : "AK" }, "total" : 8638 }
+{ "_id" : { "city" : "GUSTAVUS", "state" : "AK" }, "total" : 258 }
+{ "_id" : { "city" : "JUNEAU", "state" : "AK" }, "total" : 24947 }
+{ "_id" : { "city" : "ANGOON", "state" : "AK" }, "total" : 1002 }
+{ "_id" : { "city" : "NUIQSUT", "state" : "AK" }, "total" : 354 }
+{ "_id" : { "city" : "CHALKYITSIK", "state" : "AK" }, "total" : 99 }
+{ "_id" : { "city" : "AMBLER", "state" : "AK" }, "total" : 8 }
+{ "_id" : { "city" : "WHITE MOUNTAIN", "state" : "AK" }, "total" : 194 }
+{ "_id" : { "city" : "TELLER", "state" : "AK" }, "total" : 260 }
+{ "_id" : { "city" : "SHUNGNAK", "state" : "AK" }, "total" : 0 }
+{ "_id" : { "city" : "SHAKTOOLIK", "state" : "AK" }, "total" : 183 }
+{ "_id" : { "city" : "NULATO", "state" : "AK" }, "total" : 492 }
+{ "_id" : { "city" : "RUBY", "state" : "AK" }, "total" : 172 }
+{ "_id" : { "city" : "NOATAK", "state" : "AK" }, "total" : 395 }
+{ "_id" : { "city" : "POINT LAY", "state" : "AK" }, "total" : 139 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{pop:-1}}])
+{ "_id" : { "city" : "CRAIG", "state" : "AK" }, "total" : 1398 }
+{ "_id" : { "city" : "POINT BAKER", "state" : "AK" }, "total" : 426 }
+{ "_id" : { "city" : "HYDABURG", "state" : "AK" }, "total" : 891 }
+{ "_id" : { "city" : "KETCHIKAN", "state" : "AK" }, "total" : 14308 }
+{ "_id" : { "city" : "PETERSBURG", "state" : "AK" }, "total" : 4253 }
+{ "_id" : { "city" : "SITKA", "state" : "AK" }, "total" : 8638 }
+{ "_id" : { "city" : "GUSTAVUS", "state" : "AK" }, "total" : 258 }
+{ "_id" : { "city" : "JUNEAU", "state" : "AK" }, "total" : 24947 }
+{ "_id" : { "city" : "ANGOON", "state" : "AK" }, "total" : 1002 }
+{ "_id" : { "city" : "NUIQSUT", "state" : "AK" }, "total" : 354 }
+{ "_id" : { "city" : "CHALKYITSIK", "state" : "AK" }, "total" : 99 }
+{ "_id" : { "city" : "AMBLER", "state" : "AK" }, "total" : 8 }
+{ "_id" : { "city" : "WHITE MOUNTAIN", "state" : "AK" }, "total" : 194 }
+{ "_id" : { "city" : "TELLER", "state" : "AK" }, "total" : 260 }
+{ "_id" : { "city" : "SHUNGNAK", "state" : "AK" }, "total" : 0 }
+{ "_id" : { "city" : "SHAKTOOLIK", "state" : "AK" }, "total" : 183 }
+{ "_id" : { "city" : "NULATO", "state" : "AK" }, "total" : 492 }
+{ "_id" : { "city" : "RUBY", "state" : "AK" }, "total" : 172 }
+{ "_id" : { "city" : "NOATAK", "state" : "AK" }, "total" : 395 }
+{ "_id" : { "city" : "POINT LAY", "state" : "AK" }, "total" : 139 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{pop:-1}},all:{$sum:1}])
+2018-12-28T14:11:13.745+0530 E QUERY    [js] SyntaxError: missing ] after element list @(shell):1:110
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{pop:-1}},{all:{$sum:1}}])
+2018-12-28T14:11:27.058+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "Unrecognized pipeline stage name: 'all'",
+        "code" : 40324,
+        "codeName" : "Location40324"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{pop:-1}},{$sum:1}])
+2018-12-28T14:11:42.426+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "Unrecognized pipeline stage name: '$sum'",
+        "code" : 40324,
+        "codeName" : "Location40324"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{pop:-1}}])
+{ "_id" : { "city" : "CRAIG", "state" : "AK" }, "total" : 1398 }
+{ "_id" : { "city" : "POINT BAKER", "state" : "AK" }, "total" : 426 }
+{ "_id" : { "city" : "HYDABURG", "state" : "AK" }, "total" : 891 }
+{ "_id" : { "city" : "KETCHIKAN", "state" : "AK" }, "total" : 14308 }
+{ "_id" : { "city" : "PETERSBURG", "state" : "AK" }, "total" : 4253 }
+{ "_id" : { "city" : "SITKA", "state" : "AK" }, "total" : 8638 }
+{ "_id" : { "city" : "GUSTAVUS", "state" : "AK" }, "total" : 258 }
+{ "_id" : { "city" : "JUNEAU", "state" : "AK" }, "total" : 24947 }
+{ "_id" : { "city" : "ANGOON", "state" : "AK" }, "total" : 1002 }
+{ "_id" : { "city" : "NUIQSUT", "state" : "AK" }, "total" : 354 }
+{ "_id" : { "city" : "CHALKYITSIK", "state" : "AK" }, "total" : 99 }
+{ "_id" : { "city" : "AMBLER", "state" : "AK" }, "total" : 8 }
+{ "_id" : { "city" : "WHITE MOUNTAIN", "state" : "AK" }, "total" : 194 }
+{ "_id" : { "city" : "TELLER", "state" : "AK" }, "total" : 260 }
+{ "_id" : { "city" : "SHUNGNAK", "state" : "AK" }, "total" : 0 }
+{ "_id" : { "city" : "SHAKTOOLIK", "state" : "AK" }, "total" : 183 }
+{ "_id" : { "city" : "NULATO", "state" : "AK" }, "total" : 492 }
+{ "_id" : { "city" : "RUBY", "state" : "AK" }, "total" : 172 }
+{ "_id" : { "city" : "NOATAK", "state" : "AK" }, "total" : 395 }
+{ "_id" : { "city" : "POINT LAY", "state" : "AK" }, "total" : 139 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{pop:"-1"}}])
+2018-12-28T14:12:18.763+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "$sort key ordering must be specified using a number or {$meta: 'textScore'}",
+        "code" : 15974,
+        "codeName" : "Location15974"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{pop:-1}}])
+{ "_id" : { "city" : "CRAIG", "state" : "AK" }, "total" : 1398 }
+{ "_id" : { "city" : "POINT BAKER", "state" : "AK" }, "total" : 426 }
+{ "_id" : { "city" : "HYDABURG", "state" : "AK" }, "total" : 891 }
+{ "_id" : { "city" : "KETCHIKAN", "state" : "AK" }, "total" : 14308 }
+{ "_id" : { "city" : "PETERSBURG", "state" : "AK" }, "total" : 4253 }
+{ "_id" : { "city" : "SITKA", "state" : "AK" }, "total" : 8638 }
+{ "_id" : { "city" : "GUSTAVUS", "state" : "AK" }, "total" : 258 }
+{ "_id" : { "city" : "JUNEAU", "state" : "AK" }, "total" : 24947 }
+{ "_id" : { "city" : "ANGOON", "state" : "AK" }, "total" : 1002 }
+{ "_id" : { "city" : "NUIQSUT", "state" : "AK" }, "total" : 354 }
+{ "_id" : { "city" : "CHALKYITSIK", "state" : "AK" }, "total" : 99 }
+{ "_id" : { "city" : "AMBLER", "state" : "AK" }, "total" : 8 }
+{ "_id" : { "city" : "WHITE MOUNTAIN", "state" : "AK" }, "total" : 194 }
+{ "_id" : { "city" : "TELLER", "state" : "AK" }, "total" : 260 }
+{ "_id" : { "city" : "SHUNGNAK", "state" : "AK" }, "total" : 0 }
+{ "_id" : { "city" : "SHAKTOOLIK", "state" : "AK" }, "total" : 183 }
+{ "_id" : { "city" : "NULATO", "state" : "AK" }, "total" : 492 }
+{ "_id" : { "city" : "RUBY", "state" : "AK" }, "total" : 172 }
+{ "_id" : { "city" : "NOATAK", "state" : "AK" }, "total" : 395 }
+{ "_id" : { "city" : "POINT LAY", "state" : "AK" }, "total" : 139 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{total:-1}}])
+{ "_id" : { "city" : "CHICAGO", "state" : "IL" }, "total" : 2452177 }
+{ "_id" : { "city" : "BROOKLYN", "state" : "NY" }, "total" : 2300504 }
+{ "_id" : { "city" : "LOS ANGELES", "state" : "CA" }, "total" : 2102295 }
+{ "_id" : { "city" : "HOUSTON", "state" : "TX" }, "total" : 2095918 }
+{ "_id" : { "city" : "PHILADELPHIA", "state" : "PA" }, "total" : 1610956 }
+{ "_id" : { "city" : "NEW YORK", "state" : "NY" }, "total" : 1476790 }
+{ "_id" : { "city" : "BRONX", "state" : "NY" }, "total" : 1209548 }
+{ "_id" : { "city" : "SAN DIEGO", "state" : "CA" }, "total" : 1049298 }
+{ "_id" : { "city" : "DETROIT", "state" : "MI" }, "total" : 963243 }
+{ "_id" : { "city" : "DALLAS", "state" : "TX" }, "total" : 940191 }
+{ "_id" : { "city" : "PHOENIX", "state" : "AZ" }, "total" : 890853 }
+{ "_id" : { "city" : "MIAMI", "state" : "FL" }, "total" : 825232 }
+{ "_id" : { "city" : "SAN JOSE", "state" : "CA" }, "total" : 816653 }
+{ "_id" : { "city" : "SAN ANTONIO", "state" : "TX" }, "total" : 811792 }
+{ "_id" : { "city" : "BALTIMORE", "state" : "MD" }, "total" : 733081 }
+{ "_id" : { "city" : "SAN FRANCISCO", "state" : "CA" }, "total" : 723993 }
+{ "_id" : { "city" : "MEMPHIS", "state" : "TN" }, "total" : 632837 }
+{ "_id" : { "city" : "SACRAMENTO", "state" : "CA" }, "total" : 628279 }
+{ "_id" : { "city" : "JACKSONVILLE", "state" : "FL" }, "total" : 610160 }
+{ "_id" : { "city" : "ATLANTA", "state" : "GA" }, "total" : 609591 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"}},{$sort:{total:-1}}])
+...
+...
+MongoDB Enterprise >
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"}},{$sort:{total:-1}}])
+...
+...
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$$sort:{total:-1}}])
+2018-12-28T14:20:35.671+0530 E QUERY    [js] SyntaxError: unterminated string literal @(shell):1:56
+MongoDB Enterprise >
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},$sort:{total:-1}}])
+...
+...
+MongoDB Enterprise >
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{total:-1}}])
+{ "_id" : { "city" : "CHICAGO", "state" : "IL" }, "total" : 2452177 }
+{ "_id" : { "city" : "BROOKLYN", "state" : "NY" }, "total" : 2300504 }
+{ "_id" : { "city" : "LOS ANGELES", "state" : "CA" }, "total" : 2102295 }
+{ "_id" : { "city" : "HOUSTON", "state" : "TX" }, "total" : 2095918 }
+{ "_id" : { "city" : "PHILADELPHIA", "state" : "PA" }, "total" : 1610956 }
+{ "_id" : { "city" : "NEW YORK", "state" : "NY" }, "total" : 1476790 }
+{ "_id" : { "city" : "BRONX", "state" : "NY" }, "total" : 1209548 }
+{ "_id" : { "city" : "SAN DIEGO", "state" : "CA" }, "total" : 1049298 }
+{ "_id" : { "city" : "DETROIT", "state" : "MI" }, "total" : 963243 }
+{ "_id" : { "city" : "DALLAS", "state" : "TX" }, "total" : 940191 }
+{ "_id" : { "city" : "PHOENIX", "state" : "AZ" }, "total" : 890853 }
+{ "_id" : { "city" : "MIAMI", "state" : "FL" }, "total" : 825232 }
+{ "_id" : { "city" : "SAN JOSE", "state" : "CA" }, "total" : 816653 }
+{ "_id" : { "city" : "SAN ANTONIO", "state" : "TX" }, "total" : 811792 }
+{ "_id" : { "city" : "BALTIMORE", "state" : "MD" }, "total" : 733081 }
+{ "_id" : { "city" : "SAN FRANCISCO", "state" : "CA" }, "total" : 723993 }
+{ "_id" : { "city" : "MEMPHIS", "state" : "TN" }, "total" : 632837 }
+{ "_id" : { "city" : "SACRAMENTO", "state" : "CA" }, "total" : 628279 }
+{ "_id" : { "city" : "JACKSONVILLE", "state" : "FL" }, "total" : 610160 }
+{ "_id" : { "city" : "ATLANTA", "state" : "GA" }, "total" : 609591 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:{city:"$city",state:"$state"},total:{$sum : "$pop"}}},{$sort:{total:-1}},{$limit:3}])
+{ "_id" : { "city" : "CHICAGO", "state" : "IL" }, "total" : 2452177 }
+{ "_id" : { "city" : "BROOKLYN", "state" : "NY" }, "total" : 2300504 }
+{ "_id" : { "city" : "LOS ANGELES", "state" : "CA" }, "total" : 2102295 }
+MongoDB Enterprise > db.zipcodes.aggregate({$match:{state:"TEXAS"}})
+MongoDB Enterprise >
+MongoDB Enterprise > db.zipcodes.aggregate({$match:{state:"TEXAS"}})
+MongoDB Enterprise > db.zipcodes.find({state:"TEXAS"})
+MongoDB Enterprise > db.zipcodes.find({state:"Texas"})
+MongoDB Enterprise > db.zipcodes.find({"state":"Texas"})
+MongoDB Enterprise > db.zipcodes.find({state:"Texas"});
+MongoDB Enterprise > db.zipcodes.find({state:"TX"});
+{ "_id" : "75002", "city" : "ALLEN", "loc" : [ -96.645433, 33.093383 ], "pop" : 24151, "state" : "TX" }
+{ "_id" : "75007", "city" : "CARROLLTON", "loc" : [ -96.881988, 33.003294 ], "pop" : 54796, "state" : "TX" }
+{ "_id" : "75008", "city" : "CARROLLTON", "loc" : [ -96.923197, 33.03524 ], "pop" : 1482, "state" : "TX" }
+{ "_id" : "75019", "city" : "COPPELL", "loc" : [ -96.980516, 32.96727 ], "pop" : 16862, "state" : "TX" }
+{ "_id" : "75010", "city" : "CARROLLTON", "loc" : [ -96.877746, 33.030414 ], "pop" : 4379, "state" : "TX" }
+{ "_id" : "75009", "city" : "CELINA", "loc" : [ -96.767325, 33.310316 ], "pop" : 3373, "state" : "TX" }
+{ "_id" : "75006", "city" : "CARROLLTON", "loc" : [ -96.882464, 32.965736 ], "pop" : 37699, "state" : "TX" }
+{ "_id" : "75020", "city" : "DENISON", "loc" : [ -96.549574, 33.745009 ], "pop" : 27172, "state" : "TX" }
+{ "_id" : "75023", "city" : "PLANO", "loc" : [ -96.736454, 33.054972 ], "pop" : 40832, "state" : "TX" }
+{ "_id" : "75024", "city" : "PLANO", "loc" : [ -96.784307, 33.075211 ], "pop" : 1439, "state" : "TX" }
+{ "_id" : "75025", "city" : "PLANO", "loc" : [ -96.729142, 33.078377 ], "pop" : 8562, "state" : "TX" }
+{ "_id" : "75028", "city" : "FLOWER MOUND", "loc" : [ -97.074501, 33.038268 ], "pop" : 16825, "state" : "TX" }
+{ "_id" : "75034", "city" : "FRISCO", "loc" : [ -96.824105, 33.149901 ], "pop" : 8045, "state" : "TX" }
+{ "_id" : "75038", "city" : "IRVING", "loc" : [ -96.990503, 32.865309 ], "pop" : 20152, "state" : "TX" }
+{ "_id" : "75042", "city" : "GARLAND", "loc" : [ -96.677545, 32.918486 ], "pop" : 31807, "state" : "TX" }
+{ "_id" : "75041", "city" : "GARLAND", "loc" : [ -96.641115, 32.87937 ], "pop" : 26212, "state" : "TX" }
+{ "_id" : "75040", "city" : "GARLAND", "loc" : [ -96.624804, 32.922744 ], "pop" : 45359, "state" : "TX" }
+{ "_id" : "75044", "city" : "GARLAND", "loc" : [ -96.665383, 32.952228 ], "pop" : 30455, "state" : "TX" }
+{ "_id" : "75043", "city" : "GARLAND", "loc" : [ -96.599882, 32.856502 ], "pop" : 46620, "state" : "TX" }
+{ "_id" : "75048", "city" : "SACHSE", "loc" : [ -96.591472, 32.973576 ], "pop" : 5632, "state" : "TX" }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{state:"TX"}}])
+{ "_id" : "75002", "city" : "ALLEN", "loc" : [ -96.645433, 33.093383 ], "pop" : 24151, "state" : "TX" }
+{ "_id" : "75007", "city" : "CARROLLTON", "loc" : [ -96.881988, 33.003294 ], "pop" : 54796, "state" : "TX" }
+{ "_id" : "75008", "city" : "CARROLLTON", "loc" : [ -96.923197, 33.03524 ], "pop" : 1482, "state" : "TX" }
+{ "_id" : "75019", "city" : "COPPELL", "loc" : [ -96.980516, 32.96727 ], "pop" : 16862, "state" : "TX" }
+{ "_id" : "75010", "city" : "CARROLLTON", "loc" : [ -96.877746, 33.030414 ], "pop" : 4379, "state" : "TX" }
+{ "_id" : "75009", "city" : "CELINA", "loc" : [ -96.767325, 33.310316 ], "pop" : 3373, "state" : "TX" }
+{ "_id" : "75006", "city" : "CARROLLTON", "loc" : [ -96.882464, 32.965736 ], "pop" : 37699, "state" : "TX" }
+{ "_id" : "75020", "city" : "DENISON", "loc" : [ -96.549574, 33.745009 ], "pop" : 27172, "state" : "TX" }
+{ "_id" : "75023", "city" : "PLANO", "loc" : [ -96.736454, 33.054972 ], "pop" : 40832, "state" : "TX" }
+{ "_id" : "75024", "city" : "PLANO", "loc" : [ -96.784307, 33.075211 ], "pop" : 1439, "state" : "TX" }
+{ "_id" : "75025", "city" : "PLANO", "loc" : [ -96.729142, 33.078377 ], "pop" : 8562, "state" : "TX" }
+{ "_id" : "75028", "city" : "FLOWER MOUND", "loc" : [ -97.074501, 33.038268 ], "pop" : 16825, "state" : "TX" }
+{ "_id" : "75034", "city" : "FRISCO", "loc" : [ -96.824105, 33.149901 ], "pop" : 8045, "state" : "TX" }
+{ "_id" : "75038", "city" : "IRVING", "loc" : [ -96.990503, 32.865309 ], "pop" : 20152, "state" : "TX" }
+{ "_id" : "75042", "city" : "GARLAND", "loc" : [ -96.677545, 32.918486 ], "pop" : 31807, "state" : "TX" }
+{ "_id" : "75041", "city" : "GARLAND", "loc" : [ -96.641115, 32.87937 ], "pop" : 26212, "state" : "TX" }
+{ "_id" : "75040", "city" : "GARLAND", "loc" : [ -96.624804, 32.922744 ], "pop" : 45359, "state" : "TX" }
+{ "_id" : "75044", "city" : "GARLAND", "loc" : [ -96.665383, 32.952228 ], "pop" : 30455, "state" : "TX" }
+{ "_id" : "75043", "city" : "GARLAND", "loc" : [ -96.599882, 32.856502 ], "pop" : 46620, "state" : "TX" }
+{ "_id" : "75048", "city" : "SACHSE", "loc" : [ -96.591472, 32.973576 ], "pop" : 5632, "state" : "TX" }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{state:"TX"}},{$group:{_id:"$city", total:{$sum:"$pop"}}}])
+{ "_id" : "FORT BLISS", "total" : 20985 }
+{ "_id" : "TERLINGUA", "total" : 59 }
+{ "_id" : "PRESIDIO", "total" : 3482 }
+{ "_id" : "SIERRA BLANCA", "total" : 892 }
+{ "_id" : "SALT FLAT", "total" : 317 }
+{ "_id" : "DELL CITY", "total" : 915 }
+{ "_id" : "FORT HANCOCK", "total" : 1108 }
+{ "_id" : "CLINT", "total" : 17337 }
+{ "_id" : "CANUTILLO", "total" : 8585 }
+{ "_id" : "BIG BEND NATIONA", "total" : 249 }
+{ "_id" : "ALPINE", "total" : 7648 }
+{ "_id" : "STANTON", "total" : 3776 }
+{ "_id" : "SHEFFIELD", "total" : 428 }
+{ "_id" : "PYOTE", "total" : 370 }
+{ "_id" : "MONAHANS", "total" : 11296 }
+{ "_id" : "ODESSA", "total" : 116956 }
+{ "_id" : "GARDENDALE", "total" : 1536 }
+{ "_id" : "MIDKIFF", "total" : 1497 }
+{ "_id" : "MC CAMEY", "total" : 2950 }
+{ "_id" : "KNOTT", "total" : 245 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{state:"TX"}},{$group:{_id:"$city", total:{$sum:"$pop"}}},{$sort:{total:1}}])
+{ "_id" : "FULTON", "total" : 0 }
+{ "_id" : "ECLETO", "total" : 0 }
+{ "_id" : "BEND", "total" : 1 }
+{ "_id" : "PORT O CONNOR", "total" : 5 }
+{ "_id" : "MULDOON", "total" : 8 }
+{ "_id" : "TARPLEY", "total" : 20 }
+{ "_id" : "ART", "total" : 24 }
+{ "_id" : "WRIGHTSBORO", "total" : 26 }
+{ "_id" : "GOLDSBORO", "total" : 27 }
+{ "_id" : "TELEGRAPH", "total" : 27 }
+{ "_id" : "TOKIO", "total" : 30 }
+{ "_id" : "ROSSTON", "total" : 30 }
+{ "_id" : "BLUFFTON", "total" : 31 }
+{ "_id" : "MC COY", "total" : 34 }
+{ "_id" : "LIPSCOMB", "total" : 34 }
+{ "_id" : "GUERRA", "total" : 34 }
+{ "_id" : "FLOMOT", "total" : 38 }
+{ "_id" : "SILVER", "total" : 45 }
+{ "_id" : "MEYERSVILLE", "total" : 45 }
+{ "_id" : "FORT MC KAVETT", "total" : 47 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{state:"TX"}},{$group:{_id:"$city", total:{$sum:"$pop"}}},{$sort:{total:-1}}])
+{ "_id" : "HOUSTON", "total" : 2095918 }
+{ "_id" : "DALLAS", "total" : 940191 }
+{ "_id" : "SAN ANTONIO", "total" : 811792 }
+{ "_id" : "AUSTIN", "total" : 530049 }
+{ "_id" : "EL PASO", "total" : 511351 }
+{ "_id" : "FORT WORTH", "total" : 451415 }
+{ "_id" : "ARLINGTON", "total" : 266013 }
+{ "_id" : "CORPUS CHRISTI", "total" : 261612 }
+{ "_id" : "LUBBOCK", "total" : 201288 }
+{ "_id" : "GARLAND", "total" : 180453 }
+{ "_id" : "AMARILLO", "total" : 173158 }
+{ "_id" : "IRVING", "total" : 154459 }
+{ "_id" : "BROWNSVILLE", "total" : 129554 }
+{ "_id" : "PLANO", "total" : 128036 }
+{ "_id" : "BEAUMONT", "total" : 126988 }
+{ "_id" : "PASADENA", "total" : 117441 }
+{ "_id" : "ODESSA", "total" : 116956 }
+{ "_id" : "TYLER", "total" : 108023 }
+{ "_id" : "MIDLAND", "total" : 106611 }
+{ "_id" : "ABILENE", "total" : 104462 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$match:{state:"TX"}},{$group:{_id:"$city", total:{$sum:"$pop"}}},{$sort:{total:-1}},{$limit:3}])
+{ "_id" : "HOUSTON", "total" : 2095918 }
+{ "_id" : "DALLAS", "total" : 940191 }
+{ "_id" : "SAN ANTONIO", "total" : 811792 }
+MongoDB Enterprise > db.zipcodes.aggregate([{$match: $state}}])
+2018-12-28T14:56:37.599+0530 E QUERY    [js] SyntaxError: missing ] after element list @(shell):1:39
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", total:{$sum: "$pop"}}}])
+{ "_id" : "AK", "total" : 544698 }
+{ "_id" : "AZ", "total" : 3665228 }
+{ "_id" : "UT", "total" : 1722850 }
+{ "_id" : "WY", "total" : 453528 }
+{ "_id" : "CO", "total" : 3293755 }
+{ "_id" : "ID", "total" : 1006749 }
+{ "_id" : "OK", "total" : 3145585 }
+{ "_id" : "AR", "total" : 2350725 }
+{ "_id" : "LA", "total" : 4217595 }
+{ "_id" : "NV", "total" : 1201833 }
+{ "_id" : "NE", "total" : 1578139 }
+{ "_id" : "KS", "total" : 2475285 }
+{ "_id" : "MO", "total" : 5110648 }
+{ "_id" : "IL", "total" : 11427576 }
+{ "_id" : "OH", "total" : 10846517 }
+{ "_id" : "KY", "total" : 3675484 }
+{ "_id" : "IN", "total" : 5544136 }
+{ "_id" : "WI", "total" : 4891769 }
+{ "_id" : "HI", "total" : 1108229 }
+{ "_id" : "MS", "total" : 2573216 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", total:{$sum: "$pop"}}},{$sort:{pop:1}}])
+{ "_id" : "AK", "total" : 544698 }
+{ "_id" : "AZ", "total" : 3665228 }
+{ "_id" : "UT", "total" : 1722850 }
+{ "_id" : "WY", "total" : 453528 }
+{ "_id" : "CO", "total" : 3293755 }
+{ "_id" : "ID", "total" : 1006749 }
+{ "_id" : "OK", "total" : 3145585 }
+{ "_id" : "AR", "total" : 2350725 }
+{ "_id" : "LA", "total" : 4217595 }
+{ "_id" : "NV", "total" : 1201833 }
+{ "_id" : "NE", "total" : 1578139 }
+{ "_id" : "KS", "total" : 2475285 }
+{ "_id" : "MO", "total" : 5110648 }
+{ "_id" : "IL", "total" : 11427576 }
+{ "_id" : "OH", "total" : 10846517 }
+{ "_id" : "KY", "total" : 3675484 }
+{ "_id" : "IN", "total" : 5544136 }
+{ "_id" : "WI", "total" : 4891769 }
+{ "_id" : "HI", "total" : 1108229 }
+{ "_id" : "MS", "total" : 2573216 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", total:{$sum: "$pop"}}},{$sort:{total:1}}])
+{ "_id" : "WY", "total" : 453528 }
+{ "_id" : "AK", "total" : 544698 }
+{ "_id" : "VT", "total" : 562758 }
+{ "_id" : "DC", "total" : 606900 }
+{ "_id" : "ND", "total" : 638272 }
+{ "_id" : "DE", "total" : 666168 }
+{ "_id" : "SD", "total" : 695397 }
+{ "_id" : "MT", "total" : 798948 }
+{ "_id" : "RI", "total" : 1003218 }
+{ "_id" : "ID", "total" : 1006749 }
+{ "_id" : "HI", "total" : 1108229 }
+{ "_id" : "NH", "total" : 1109252 }
+{ "_id" : "NV", "total" : 1201833 }
+{ "_id" : "ME", "total" : 1226648 }
+{ "_id" : "NM", "total" : 1515069 }
+{ "_id" : "NE", "total" : 1578139 }
+{ "_id" : "UT", "total" : 1722850 }
+{ "_id" : "WV", "total" : 1793146 }
+{ "_id" : "AR", "total" : 2350725 }
+{ "_id" : "KS", "total" : 2475285 }
+Type "it" for more
+MongoDB Enterprise > var x = db.zipcodes.aggregate([{$group:{_id:"$state", total:{$sum: "$pop"}}},{$sort:{total:1}}])
+MongoDB Enterprise > x
+{ "_id" : "WY", "total" : 453528 }
+{ "_id" : "AK", "total" : 544698 }
+{ "_id" : "VT", "total" : 562758 }
+{ "_id" : "DC", "total" : 606900 }
+{ "_id" : "ND", "total" : 638272 }
+{ "_id" : "DE", "total" : 666168 }
+{ "_id" : "SD", "total" : 695397 }
+{ "_id" : "MT", "total" : 798948 }
+{ "_id" : "RI", "total" : 1003218 }
+{ "_id" : "ID", "total" : 1006749 }
+{ "_id" : "HI", "total" : 1108229 }
+{ "_id" : "NH", "total" : 1109252 }
+{ "_id" : "NV", "total" : 1201833 }
+{ "_id" : "ME", "total" : 1226648 }
+{ "_id" : "NM", "total" : 1515069 }
+{ "_id" : "NE", "total" : 1578139 }
+{ "_id" : "UT", "total" : 1722850 }
+{ "_id" : "WV", "total" : 1793146 }
+{ "_id" : "AR", "total" : 2350725 }
+{ "_id" : "KS", "total" : 2475285 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg:{$sum: "$pop"}]}},{$sort:{averagePop:1}}])
+2018-12-28T15:11:22.649+0530 E QUERY    [js] SyntaxError: missing } after property list @(shell):1:77
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}]}},{$sort:{averagePop:1}}])
+2018-12-28T15:13:24.074+0530 E QUERY    [js] SyntaxError: missing } after property list @(shell):1:71
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}}},{$sort:{averagePop:1}}])
+{ "_id" : "ND", "averagePop" : 1632.4092071611253 }
+{ "_id" : "SD", "averagePop" : 1810.9296875 }
+{ "_id" : "VT", "averagePop" : 2315.8765432098767 }
+{ "_id" : "MT", "averagePop" : 2544.420382165605 }
+{ "_id" : "WV", "averagePop" : 2733.454268292683 }
+{ "_id" : "NE", "averagePop" : 2749.3710801393727 }
+{ "_id" : "AK", "averagePop" : 2793.3230769230768 }
+{ "_id" : "ME", "averagePop" : 2991.8243902439026 }
+{ "_id" : "IA", "averagePop" : 3011.301518438178 }
+{ "_id" : "WY", "averagePop" : 3239.4857142857145 }
+{ "_id" : "KS", "averagePop" : 3461.937062937063 }
+{ "_id" : "AR", "averagePop" : 4066.998269896194 }
+{ "_id" : "ID", "averagePop" : 4126.020491803279 }
+{ "_id" : "KY", "averagePop" : 4543.243510506799 }
+{ "_id" : "MN", "averagePop" : 4958.02947845805 }
+{ "_id" : "NH", "averagePop" : 5088.311926605505 }
+{ "_id" : "MO", "averagePop" : 5141.496981891348 }
+{ "_id" : "OK", "averagePop" : 5367.892491467577 }
+{ "_id" : "NM", "averagePop" : 5489.380434782609 }
+{ "_id" : "WI", "averagePop" : 6832.079608938548 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$floor:{$avg: "$pop"}}}},{$sort:{averagePop:1}}])
+2018-12-28T15:16:17.851+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "unknown group operator '$floor'",
+        "code" : 15952,
+        "codeName" : "Location15952"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$floor:{$avg: "$pop"}}}},{$sort:{averagePop:1}}])
+2018-12-28T15:17:03.550+0530 E QUERY    [js] Error: command failed: {
+        "ok" : 0,
+        "errmsg" : "unknown group operator '$floor'",
+        "code" : 15952,
+        "codeName" : "Location15952"
+} : aggregate failed :
+_getErrorWithCode@src/mongo/shell/utils.js:25:13
+doassert@src/mongo/shell/assert.js:18:14
+_assertCommandWorked@src/mongo/shell/assert.js:534:17
+assert.commandWorked@src/mongo/shell/assert.js:618:16
+DB.prototype._runAggregate@src/mongo/shell/db.js:260:9
+DBCollection.prototype.aggregate@src/mongo/shell/collection.js:1056:12
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}}},{$sort:{averagePop:1}}])
+{ "_id" : "ND", "averagePop" : 1632.4092071611253 }
+{ "_id" : "SD", "averagePop" : 1810.9296875 }
+{ "_id" : "VT", "averagePop" : 2315.8765432098767 }
+{ "_id" : "MT", "averagePop" : 2544.420382165605 }
+{ "_id" : "WV", "averagePop" : 2733.454268292683 }
+{ "_id" : "NE", "averagePop" : 2749.3710801393727 }
+{ "_id" : "AK", "averagePop" : 2793.3230769230768 }
+{ "_id" : "ME", "averagePop" : 2991.8243902439026 }
+{ "_id" : "IA", "averagePop" : 3011.301518438178 }
+{ "_id" : "WY", "averagePop" : 3239.4857142857145 }
+{ "_id" : "KS", "averagePop" : 3461.937062937063 }
+{ "_id" : "AR", "averagePop" : 4066.998269896194 }
+{ "_id" : "ID", "averagePop" : 4126.020491803279 }
+{ "_id" : "KY", "averagePop" : 4543.243510506799 }
+{ "_id" : "MN", "averagePop" : 4958.02947845805 }
+{ "_id" : "NH", "averagePop" : 5088.311926605505 }
+{ "_id" : "MO", "averagePop" : 5141.496981891348 }
+{ "_id" : "OK", "averagePop" : 5367.892491467577 }
+{ "_id" : "NM", "averagePop" : 5489.380434782609 }
+{ "_id" : "WI", "averagePop" : 6832.079608938548 }
+Type "it" for more
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}}},{$sort:{averagePop:-1}},{$limit:3}])
+{ "_id" : "DC", "averagePop" : 25287.5 }
+{ "_id" : "CA", "averagePop" : 19627.236147757256 }
+{ "_id" : "FL", "averagePop" : 15779.407960199005 }
+MongoDB Enterprise > >sql.txt
+2018-12-28T15:21:57.089+0530 E QUERY    [js] SyntaxError: expected expression, got '>' @(shell):1:0
+MongoDB Enterprise > mongo.txt
+2018-12-28T15:27:38.021+0530 E QUERY    [js] ReferenceError: mongo is not defined :
+@(shell):1:1
+MongoDB Enterprise > >mongo.txt
+2018-12-28T15:27:45.829+0530 E QUERY    [js] SyntaxError: expected expression, got '>' @(shell):1:0
+MongoDB Enterprise > notepad.exe mongo.txt
+2018-12-28T15:28:10.021+0530 E QUERY    [js] SyntaxError: missing ; before statement @(shell):1:12
+MongoDB Enterprise > notepad.exe mongo.txt;
+2018-12-28T15:28:14.461+0530 E QUERY    [js] SyntaxError: missing ; before statement @(shell):1:12
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}}},{$sort:{averagePop:-1}},{$limit:3}])
+{ "_id" : "DC", "averagePop" : 25287.5 }
+{ "_id" : "CA", "averagePop" : 19627.236147757256 }
+{ "_id" : "FL", "averagePop" : 15779.407960199005 }
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}}},{$sort:{averagePop:-1}},{$limit:3}]) >mongoDB.txt
+2018-12-28T15:29:36.784+0530 E QUERY    [js] ReferenceError: mongoDB is not defined :
+@(shell):1:1
+MongoDB Enterprise > notepad.exe mongoDB.txt
+2018-12-28T15:30:13.734+0530 E QUERY    [js] SyntaxError: missing ; before statement @(shell):1:12
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}}},{$sort:{averagePop:-1}},{$limit:3}]) >monRos.json
+2018-12-28T15:58:59.767+0530 E QUERY    [js] ReferenceError: monRos is not defined :
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}}},{$sort:{averagePop:-1}},{$limit:3}]) > monRos.json
+2018-12-28T15:59:15.367+0530 E QUERY    [js] ReferenceError: monRos is not defined :
+@(shell):1:1
+MongoDB Enterprise > $ mongo dbname << EOF > output.json
+2018-12-28T16:00:40.013+0530 E QUERY    [js] SyntaxError: missing ; before statement @(shell):1:2
+MongoDB Enterprise > db.collection.find().pretty()
+MongoDB Enterprise > EOF
+2018-12-28T16:00:44.260+0530 E QUERY    [js] ReferenceError: EOF is not defined :
+@(shell):1:1
+MongoDB Enterprise > $ mongo population << EOF > output.json
+2018-12-28T16:01:04.716+0530 E QUERY    [js] SyntaxError: missing ; before statement @(shell):1:2
+MongoDB Enterprise > $ mongo population << EOF > output.json
+2018-12-28T16:01:29.724+0530 E QUERY    [js] SyntaxError: missing ; before statement @(shell):1:2
+MongoDB Enterprise > $ mongo population << EOF > output.json db.zipcodes.find().pretty() EOF
+2018-12-28T16:02:04.493+0530 E QUERY    [js] SyntaxError: missing ; before statement @(shell):1:2
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}}},{$sort:{averagePop:-1}},{$limit:3}])
+{ "_id" : "DC", "averagePop" : 25287.5 }
+{ "_id" : "CA", "averagePop" : 19627.236147757256 }
+{ "_id" : "FL", "averagePop" : 15779.407960199005 }
+MongoDB Enterprise > |clip
+2018-12-28T16:06:27.352+0530 E QUERY    [js] SyntaxError: expected expression, got '|' @(shell):1:0
+MongoDB Enterprise > dir /od |clip
+2018-12-28T16:06:41.928+0530 E QUERY    [js] ReferenceError: dir is not defined :
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}}},{$sort:{averagePop:-1}},{$limit:3}])
+{ "_id" : "DC", "averagePop" : 25287.5 }
+{ "_id" : "CA", "averagePop" : 19627.236147757256 }
+{ "_id" : "FL", "averagePop" : 15779.407960199005 }
+MongoDB Enterprise > dir /od |clip
+2018-12-28T16:06:54.184+0530 E QUERY    [js] ReferenceError: dir is not defined :
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}}},{$sort:{averagePop:-1}},{$limit:3}]) |clip
+2018-12-28T16:07:59.965+0530 E QUERY    [js] ReferenceError: clip is not defined :
+@(shell):1:1
+MongoDB Enterprise > db.zipcodes.aggregate([{$group:{_id:"$state", averagePop:{$avg: "$pop"}}},{$sort:{averagePop:-1}},{$limit:3}]); |clip
+2018-12-28T16:08:09.337+0530 E QUERY    [js] SyntaxError: expected expression, got '|' @(shell):1:112
+MongoDB Enterprise > $ mongo dbname << EOF > output.json
+2018-12-28T16:19:15.571+0530 E QUERY    [js] SyntaxError: missing ; before statement @(shell):1:2
+MongoDB Enterprise > db.collection.find().pretty()
+MongoDB Enterprise > EOF$ mongo dbname << EOF > output.json
+2018-12-28T16:19:16.204+0530 E QUERY    [js] SyntaxError: missing ; before statement @(shell):1:5
+MongoDB Enterprise > db.collection.find().pretty()
+MongoDB Enterprise > $ mongo dbname << EOF > output.jsonEOF
+2018-12-28T16:20:02.574+0530 E QUERY    [js] SyntaxError: missing ; before statement @(shell):1:2
+MongoDB Enterprise > db.collection.find().pretty()
+MongoDB Enterprise > EOF

@@ -1,5 +1,5 @@
 var fs = require('fs');
-var count =0 ;
+var count =0;
 var array = fs.readFileSync("write.txt").toString().split(" ");
 for(var index = 0 ; index < array.length; index++){
     console.log(array[index]);
