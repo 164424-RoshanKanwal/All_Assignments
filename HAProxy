@@ -1,0 +1,452 @@
+
+rkanwal@DIN8000535 MINGW64 ~/Desktop
+$ ssh -i ~/.ssh/id_rsa roshan.kanwal-capgemini.com@bastion.7c34.example.opentlc.com
+Enter passphrase for key '/c/Users/rkanwal/.ssh/id_rsa':
+Last login: Tue Mar 26 09:23:39 2019 from 202.91.136.3
+[roshan.kanwal-capgemini.com@bastion ~]$ sudo su
+[root@bastion roshan.kanwal-capgemini.com]# oc whoami
+system:admin
+[root@bastion roshan.kanwal-capgemini.com]# ssh master1.7c34.internal
+Last login: Tue Mar 26 09:34:20 2019 from ip-192-168-0-100.ec2.internal
+[ec2-user@master1 ~]$ sudo -i
+[root@master1 ~]# oc get users
+NAME       UID                                    FULL NAME          IDENTITIES
+payment1   aae96203-4fa9-11e9-83c2-0607c66dde96   payment1 OSEUser   ldap:uid=payment1,cn=users,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com
+[root@master1 ~]# oc delete user andrew
+Error from server (NotFound): users.user.openshift.io "andrew" not found
+[root@master1 ~]# oc adm groups sync --sync-config=/etc/origin/master/groupsync.yaml --whitelist=/etc/origin/master/whitelist.yaml
+apiVersion: v1
+items:
+- apiVersion: user.openshift.io/v1
+  kind: Group
+  metadata:
+    annotations:
+      openshift.io/ldap.sync-time: 2019-03-26T09:53:42Z
+      openshift.io/ldap.uid: cn=portalapp,cn=groups,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com
+      openshift.io/ldap.url: ipa.shared.example.opentlc.com:389
+    creationTimestamp: null
+    labels:
+      openshift.io/ldap.host: ipa.shared.example.opentlc.com
+    name: portalapp
+  users:
+  - andrew
+  - portal1
+  - portal2
+- apiVersion: user.openshift.io/v1
+  kind: Group
+  metadata:
+    annotations:
+      openshift.io/ldap.sync-time: 2019-03-26T09:53:43Z
+      openshift.io/ldap.uid: cn=paymentapp,cn=groups,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com
+      openshift.io/ldap.url: ipa.shared.example.opentlc.com:389
+    creationTimestamp: null
+    labels:
+      openshift.io/ldap.host: ipa.shared.example.opentlc.com
+    name: paymentapp
+  users:
+  - marina
+  - payment1
+  - payment2
+- apiVersion: user.openshift.io/v1
+  kind: Group
+  metadata:
+    annotations:
+      openshift.io/ldap.sync-time: 2019-03-26T09:53:45Z
+      openshift.io/ldap.uid: cn=ocp-platform,cn=groups,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com
+      openshift.io/ldap.url: ipa.shared.example.opentlc.com:389
+    creationTimestamp: null
+    labels:
+      openshift.io/ldap.host: ipa.shared.example.opentlc.com
+    name: ocp-platform
+  users:
+  - david
+  - admin1
+  - admin2
+- apiVersion: user.openshift.io/v1
+  kind: Group
+  metadata:
+    annotations:
+      openshift.io/ldap.sync-time: 2019-03-26T09:53:47Z
+      openshift.io/ldap.uid: cn=ocp-production,cn=groups,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com
+      openshift.io/ldap.url: ipa.shared.example.opentlc.com:389
+    creationTimestamp: null
+    labels:
+      openshift.io/ldap.host: ipa.shared.example.opentlc.com
+    name: ocp-production
+  users:
+  - karla
+  - prod1
+  - prod2
+kind: List
+metadata: {}
+[root@master1 ~]# oc adm groups sync --sync-config=/etc/origin/master/groupsync.yaml --whitelist=/etc/origin/master/whitelist.yaml --confirm
+group/portalapp
+group/paymentapp
+group/ocp-platform
+group/ocp-production
+[root@master1 ~]# oc get groups
+NAME             USERS
+ocp-platform     david, admin1, admin2
+ocp-production   karla, prod1, prod2
+paymentapp       marina, payment1, payment2
+portalapp        andrew, portal1, portal2
+[root@master1 ~]# exit
+logout
+[ec2-user@master1 ~]$ exit
+logout
+Connection to master1.7c34.internal closed.
+[root@bastion roshan.kanwal-capgemini.com]# export GUID=`hostname|awk -F. '{print $2}'`
+[root@bastion roshan.kanwal-capgemini.com]# echo "export GUID=$GUID" >> ~/.bashrc
+[root@bastion roshan.kanwal-capgemini.com]# echo $GUID
+7c34
+[root@bastion roshan.kanwal-capgemini.com]#
+[root@bastion roshan.kanwal-capgemini.com]# ssh support1.$GUID.internal
+sudo -i
+mkdir -p /srv/nfs/user-vols/pv{1..200}
+
+Last login: Tue Mar 26 07:08:26 2019 from ip-192-168-0-100.ec2.internal
+sudo -i
+mkdir -p /srv/nfs/user-vols/pv{1..200}
+
+for pvnum in {1..50} ; do
+echo /srv/nfs/user-vols/pv${pvnum} *(rw,root_squash) >> /etc/exports.d/openshift-uservols.exports
+chown -R nfsnobody.nfsnobody  /srv/nfs
+chmod -R 777 /srv/nfs
+done
+
+systemctl restart nfs-server
+exit
+exit[ec2-user@support1 ~]$ sudo -i
+[root@support1 ~]# mkdir -p /srv/nfs/user-vols/pv{1..200}
+[root@support1 ~]#
+[root@support1 ~]# for pvnum in {1..50} ; do
+> echo /srv/nfs/user-vols/pv${pvnum} *(rw,root_squash) >> /etc/exports.d/openshift-uservols.exports
+> chown -R nfsnobody.nfsnobody  /srv/nfs
+> chmod -R 777 /srv/nfs
+> done
+[root@support1 ~]#
+[root@support1 ~]# systemctl restart nfs-server
+[root@support1 ~]# exit
+logout
+[ec2-user@support1 ~]$ exit
+logout
+Connection to support1.7c34.internal closed.
+[root@bastion roshan.kanwal-capgemini.com]# export GUID=`hostname|awk -F. '{print $2}'`
+export volsize="5Gi"
+[root@bastion roshan.kanwal-capgemini.com]#
+[root@bastion roshan.kanwal-capgemini.com]# export volsize="5Gi"
+[root@bastion roshan.kanwal-capgemini.com]# mkdir /root/pvs
+[root@bastion roshan.kanwal-capgemini.com]# for volume in pv{1..25} ; do
+> cat << EOF > /root/pvs/${volume}
+> {
+>   "apiVersion": "v1",
+>   "kind": "PersistentVolume",
+>   "metadata": {
+>     "name": "${volume}"
+>   },
+>   "spec": {
+>     "capacity": {
+>         "storage": "${volsize}"
+>     },
+>     "accessModes": [ "ReadWriteOnce" ],
+>     "nfs": {
+>         "path": "/srv/nfs/user-vols/${volume}",
+>         "server": "support1.${GUID}.internal"
+>     },
+>     "persistentVolumeReclaimPolicy": "Recycle"
+>   }
+> }
+> EOF
+> echo "Created def file for ${volume}";
+> done;
+Created def file for pv1
+Created def file for pv2
+Created def file for pv3
+Created def file for pv4
+Created def file for pv5
+Created def file for pv6
+Created def file for pv7
+Created def file for pv8
+Created def file for pv9
+Created def file for pv10
+Created def file for pv11
+Created def file for pv12
+Created def file for pv13
+Created def file for pv14
+Created def file for pv15
+Created def file for pv16
+Created def file for pv17
+Created def file for pv18
+Created def file for pv19
+Created def file for pv20
+Created def file for pv21
+Created def file for pv22
+Created def file for pv23
+Created def file for pv24
+Created def file for pv25
+[root@bastion roshan.kanwal-capgemini.com]# export GUID=`hostname|awk -F. '{print $2}'`
+[root@bastion roshan.kanwal-capgemini.com]#
+[root@bastion roshan.kanwal-capgemini.com]# export volsize="10Gi"
+[root@bastion roshan.kanwal-capgemini.com]# for volume in pv{26..50} ; do
+> cat << EOF > /root/pvs/${volume}
+> {
+>   "apiVersion": "v1",
+>   "kind": "PersistentVolume",
+>   "metadata": {
+>     "name": "${volume}"
+>   },
+>   "spec": {
+>     "capacity": {
+>         "storage": "${volsize}"
+>     },
+>     "accessModes": [ "ReadWriteMany" ],
+>     "nfs": {
+>         "path": "/srv/nfs/user-vols/${volume}",
+>         "server": "support1.${GUID}.internal"
+>     },
+>     "persistentVolumeReclaimPolicy": "Retain"
+>   }
+> }
+> EOF
+> echo "Created def file for ${volume}";
+> done;
+Created def file for pv26
+Created def file for pv27
+Created def file for pv28
+Created def file for pv29
+Created def file for pv30
+Created def file for pv31
+Created def file for pv32
+Created def file for pv33
+Created def file for pv34
+Created def file for pv35
+Created def file for pv36
+Created def file for pv37
+Created def file for pv38
+Created def file for pv39
+Created def file for pv40
+Created def file for pv41
+Created def file for pv42
+Created def file for pv43
+Created def file for pv44
+Created def file for pv45
+Created def file for pv46
+Created def file for pv47
+Created def file for pv48
+Created def file for pv49
+Created def file for pv50
+[root@bastion roshan.kanwal-capgemini.com]# cat /root/pvs/* | oc create -f -
+persistentvolume/pv1 created
+persistentvolume/pv10 created
+persistentvolume/pv11 created
+persistentvolume/pv12 created
+persistentvolume/pv13 created
+persistentvolume/pv14 created
+persistentvolume/pv15 created
+persistentvolume/pv16 created
+persistentvolume/pv17 created
+persistentvolume/pv18 created
+persistentvolume/pv19 created
+persistentvolume/pv2 created
+persistentvolume/pv20 created
+persistentvolume/pv21 created
+persistentvolume/pv22 created
+persistentvolume/pv23 created
+persistentvolume/pv24 created
+persistentvolume/pv25 created
+persistentvolume/pv26 created
+persistentvolume/pv27 created
+persistentvolume/pv28 created
+persistentvolume/pv29 created
+persistentvolume/pv3 created
+persistentvolume/pv30 created
+persistentvolume/pv31 created
+persistentvolume/pv32 created
+persistentvolume/pv33 created
+persistentvolume/pv34 created
+persistentvolume/pv35 created
+persistentvolume/pv36 created
+persistentvolume/pv37 created
+persistentvolume/pv38 created
+persistentvolume/pv39 created
+persistentvolume/pv4 created
+persistentvolume/pv40 created
+persistentvolume/pv41 created
+persistentvolume/pv42 created
+persistentvolume/pv43 created
+persistentvolume/pv44 created
+persistentvolume/pv45 created
+persistentvolume/pv46 created
+persistentvolume/pv47 created
+persistentvolume/pv48 created
+persistentvolume/pv49 created
+persistentvolume/pv5 created
+persistentvolume/pv50 created
+persistentvolume/pv6 created
+persistentvolume/pv7 created
+persistentvolume/pv8 created
+persistentvolume/pv9 created
+[root@bastion roshan.kanwal-capgemini.com]# oc get pv
+NAME              CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM                                 STORAGECLASS   REASON    AGE
+logging-volume    10Gi       RWO            Retain           Bound       openshift-logging/logging-es-0                                 2h
+metrics-volume    10Gi       RWO            Retain           Bound       openshift-infra/metrics-cassandra-1                            2h
+pv1               5Gi        RWO            Recycle          Available                                                                  9s
+pv10              5Gi        RWO            Recycle          Available                                                                  9s
+pv11              5Gi        RWO            Recycle          Available                                                                  9s
+pv12              5Gi        RWO            Recycle          Available                                                                  9s
+pv13              5Gi        RWO            Recycle          Available                                                                  9s
+pv14              5Gi        RWO            Recycle          Available                                                                  9s
+pv15              5Gi        RWO            Recycle          Available                                                                  9s
+pv16              5Gi        RWO            Recycle          Available                                                                  9s
+pv17              5Gi        RWO            Recycle          Available                                                                  9s
+pv18              5Gi        RWO            Recycle          Available                                                                  9s
+pv19              5Gi        RWO            Recycle          Available                                                                  9s
+pv2               5Gi        RWO            Recycle          Available                                                                  9s
+pv20              5Gi        RWO            Recycle          Available                                                                  9s
+pv21              5Gi        RWO            Recycle          Available                                                                  9s
+pv22              5Gi        RWO            Recycle          Available                                                                  9s
+pv23              5Gi        RWO            Recycle          Available                                                                  9s
+pv24              5Gi        RWO            Recycle          Available                                                                  9s
+pv25              5Gi        RWO            Recycle          Available                                                                  9s
+pv26              10Gi       RWX            Retain           Available                                                                  9s
+pv27              10Gi       RWX            Retain           Available                                                                  9s
+pv28              10Gi       RWX            Retain           Available                                                                  9s
+pv29              10Gi       RWX            Retain           Available                                                                  9s
+pv3               5Gi        RWO            Recycle          Available                                                                  9s
+pv30              10Gi       RWX            Retain           Available                                                                  9s
+pv31              10Gi       RWX            Retain           Available                                                                  9s
+pv32              10Gi       RWX            Retain           Available                                                                  9s
+pv33              10Gi       RWX            Retain           Available                                                                  9s
+pv34              10Gi       RWX            Retain           Available                                                                  9s
+pv35              10Gi       RWX            Retain           Available                                                                  9s
+pv36              10Gi       RWX            Retain           Available                                                                  9s
+pv37              10Gi       RWX            Retain           Available                                                                  9s
+pv38              10Gi       RWX            Retain           Available                                                                  9s
+pv39              10Gi       RWX            Retain           Available                                                                  9s
+pv4               5Gi        RWO            Recycle          Available                                                                  9s
+pv40              10Gi       RWX            Retain           Available                                                                  9s
+pv41              10Gi       RWX            Retain           Available                                                                  9s
+pv42              10Gi       RWX            Retain           Available                                                                  9s
+pv43              10Gi       RWX            Retain           Available                                                                  9s
+pv44              10Gi       RWX            Retain           Available                                                                  9s
+pv45              10Gi       RWX            Retain           Available                                                                  9s
+pv46              10Gi       RWX            Retain           Available                                                                  9s
+pv47              10Gi       RWX            Retain           Available                                                                  9s
+pv48              10Gi       RWX            Retain           Available                                                                  9s
+pv49              10Gi       RWX            Retain           Available                                                                  9s
+pv5               5Gi        RWO            Recycle          Available                                                                  9s
+pv50              10Gi       RWX            Retain           Available                                                                  9s
+pv6               5Gi        RWO            Recycle          Available                                                                  9s
+pv7               5Gi        RWO            Recycle          Available                                                                  9s
+pv8               5Gi        RWO            Recycle          Available                                                                  9s
+pv9               5Gi        RWO            Recycle          Available                                                                  9s
+registry-volume   20Gi       RWX            Retain           Bound       default/registry-claim                                         2h
+[root@bastion roshan.kanwal-capgemini.com]# oc new-project smoke-test
+Now using project "smoke-test" on server "https://loadbalancer.7c34.internal:443".
+
+You can add applications to this project with the 'new-app' command. For example, try:
+
+    oc new-app centos/ruby-25-centos7~https://github.com/sclorg/ruby-ex.git
+
+to build a new example application in Ruby.
+[root@bastion roshan.kanwal-capgemini.com]# oc new-app nodejs-mongo-persistent
+--> Deploying template "openshift/nodejs-mongo-persistent" to project smoke-test
+
+     Node.js + MongoDB
+     ---------
+     An example Node.js application with a MongoDB database. For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/nodejs-ex/blob/master/README.md.
+
+     The following service(s) have been created in your project: nodejs-mongo-persistent, mongodb.
+
+     For more information about using this template, including OpenShift considerations, see https://github.com/sclorg/nodejs-ex/blob/master/README.md.
+
+     * With parameters:
+        * Name=nodejs-mongo-persistent
+        * Namespace=openshift
+        * Version of NodeJS Image=8
+        * Version of MongoDB Image=3.4
+        * Memory Limit=512Mi
+        * Memory Limit (MongoDB)=512Mi
+        * Volume Capacity=1Gi
+        * Git Repository URL=https://github.com/sclorg/nodejs-ex.git
+        * Git Reference=
+        * Context Directory=
+        * Application Hostname=
+        * GitHub Webhook Secret=eF08t4bK01sbB4mdtjLSWdATVdLqRLmphg3g4SdJ # generated
+        * Generic Webhook Secret=MesC6W215TEc86NiiPbHCKIrkJGag74JcCFYuYna # generated
+        * Database Service Name=mongodb
+        * MongoDB Username=userPIM # generated
+        * MongoDB Password=5rouhsuenx6BnGHL # generated
+        * Database Name=sampledb
+        * Database Administrator Password=AcFHRGUNk1QTkMwm # generated
+        * Custom NPM Mirror URL=
+
+--> Creating resources ...
+    secret "nodejs-mongo-persistent" created
+    service "nodejs-mongo-persistent" created
+    route.route.openshift.io "nodejs-mongo-persistent" created
+    imagestream.image.openshift.io "nodejs-mongo-persistent" created
+    buildconfig.build.openshift.io "nodejs-mongo-persistent" created
+    deploymentconfig.apps.openshift.io "nodejs-mongo-persistent" created
+    persistentvolumeclaim "mongodb" created
+    service "mongodb" created
+    deploymentconfig.apps.openshift.io "mongodb" created
+--> Success
+    Access your application via route 'nodejs-mongo-persistent-smoke-test.apps.7c34.example.opentlc.com'
+    Build scheduled, use 'oc logs -f bc/nodejs-mongo-persistent' to track its progress.
+    Run 'oc status' to view your app.
+[root@bastion roshan.kanwal-capgemini.com]# oc status
+In project smoke-test on server https://loadbalancer.7c34.internal:443
+
+svc/mongodb - 172.30.242.208:27017
+  dc/mongodb deploys openshift/mongodb:3.4
+    deployment #1 running for 12 seconds - 0/1 pods
+
+http://nodejs-mongo-persistent-smoke-test.apps.7c34.example.opentlc.com (svc/nodejs-mongo-persistent)
+  dc/nodejs-mongo-persistent deploys istag/nodejs-mongo-persistent:latest <-
+    bc/nodejs-mongo-persistent source builds https://github.com/sclorg/nodejs-ex.git on openshift/nodejs:8
+      build #1 running for 12 seconds - e59fe75: Merge pull request #206 from liangxia/okd (Honza Horak <hhorak@redhat.com>)
+    deployment #1 waiting on image or update
+
+
+1 info identified, use 'oc status --suggest' to see details.
+[root@bastion roshan.kanwal-capgemini.com]# oc get pods -w
+NAME                              READY     STATUS    RESTARTS   AGE
+mongodb-1-deploy                  1/1       Running   0          28s
+mongodb-1-nlwrj                   0/1       Running   0          24s
+nodejs-mongo-persistent-1-build   1/1       Running   0          29s
+nodejs-mongo-persistent-1-deploy   0/1       Pending   0         0s
+nodejs-mongo-persistent-1-deploy   0/1       Pending   0         0s
+nodejs-mongo-persistent-1-deploy   0/1       ContainerCreating   0         1s
+nodejs-mongo-persistent-1-build   0/1       Completed   0         40s
+mongodb-1-nlwrj   1/1       Running   0         35s
+mongodb-1-deploy   0/1       Completed   0         40s
+mongodb-1-deploy   0/1       Terminating   0         40s
+mongodb-1-deploy   0/1       Terminating   0         40s
+nodejs-mongo-persistent-1-deploy   1/1       Running   0         5s
+nodejs-mongo-persistent-1-kttwx   0/1       Pending   0         0s
+nodejs-mongo-persistent-1-kttwx   0/1       Pending   0         0s
+nodejs-mongo-persistent-1-kttwx   0/1       ContainerCreating   0         0s
+
+nodejs-mongo-persistent-1-kttwx   0/1       Running   0         17s
+nodejs-mongo-persistent-1-kttwx   1/1       Running   0         28s
+nodejs-mongo-persistent-1-deploy   0/1       Completed   0         34s
+nodejs-mongo-persistent-1-deploy   0/1       Terminating   0         34s
+nodejs-mongo-persistent-1-deploy   0/1       Terminating   0         34s
+
+
+
+
+
+
+oc get pvc
+^C[root@bastion roshan.kanwal-capgemini.com]# oc get pvc
+NAME      STATUS    VOLUME    CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+mongodb   Bound     pv17      5Gi        RWO                           2m
+[root@bastion roshan.kanwal-capgemini.com]# oc get route
+NAME                      HOST/PORT                                                          PATH      SERVICES                  PORT      TERMINATION   WILDCARD
+nodejs-mongo-persistent   nodejs-mongo-persistent-smoke-test.apps.7c34.example.opentlc.com             nodejs-mongo-persistent   <all>                   None
+[root@bastion roshan.kanwal-capgemini.com]# ^C
+[root@bastion roshan.kanwal-capgemini.com]#
+rkanwal@DIN8000535 MINGW64 ~/Desktop
+$
